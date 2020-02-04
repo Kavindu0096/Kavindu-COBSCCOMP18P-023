@@ -1,0 +1,6 @@
+framework module Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests {
+  umbrella header "Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
