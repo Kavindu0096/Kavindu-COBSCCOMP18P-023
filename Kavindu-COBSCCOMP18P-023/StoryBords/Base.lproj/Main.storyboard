@@ -171,9 +171,15 @@
                                     <constraint firstItem="b8e-nT-FXy" firstAttribute="leading" secondItem="RLP-EC-s3l" secondAttribute="leading" id="I9a-Of-izf"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiY-Mw-shT">
-                                <rect key="frame" x="12" y="738" width="390" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiY-Mw-shT">
+                                <rect key="frame" x="150" y="738" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="amC-L8-xpv"/>
+                                </constraints>
                                 <state key="normal" title="Publish"/>
+                                <connections>
+                                    <action selector="publishBtnTapped:" destination="yuA-SE-hEF" eventType="touchUpInside" id="PEo-eK-WFh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Plan your event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2S-9b-eaG">
                                 <rect key="frame" x="53" y="108" width="298" height="37"/>
@@ -187,13 +193,21 @@
                             <constraint firstItem="X2S-9b-eaG" firstAttribute="leading" secondItem="4rI-BI-sBw" secondAttribute="leading" constant="53" id="4ls-gY-75c"/>
                             <constraint firstItem="X2S-9b-eaG" firstAttribute="top" secondItem="4rI-BI-sBw" secondAttribute="top" constant="20" id="N6q-I0-lIv"/>
                             <constraint firstItem="CiY-Mw-shT" firstAttribute="bottom" secondItem="RLP-EC-s3l" secondAttribute="bottom" constant="55" id="NWJ-0o-etK"/>
+                            <constraint firstItem="CiY-Mw-shT" firstAttribute="leading" secondItem="4rI-BI-sBw" secondAttribute="leading" constant="150" id="UZF-NC-rIk"/>
                             <constraint firstItem="RLP-EC-s3l" firstAttribute="leading" secondItem="4rI-BI-sBw" secondAttribute="leading" constant="10" id="YmV-ip-RrM"/>
                             <constraint firstItem="RLP-EC-s3l" firstAttribute="top" secondItem="4rI-BI-sBw" secondAttribute="top" constant="100" id="ZbY-hh-3ub"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4rI-BI-sBw"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionTxt" destination="xe8-AS-8dV" id="0Rb-LE-M7g"/>
                         <outlet property="displayImg" destination="Cnd-rN-23C" id="Q9B-d2-VOD"/>
+                        <outlet property="endDateTxt" destination="FkY-rD-PcG" id="fWe-wA-2Zm"/>
+                        <outlet property="locationTxt" destination="czw-YH-0CI" id="MXP-5Z-4Iz"/>
+                        <outlet property="oraganizedByTxt" destination="zr7-fb-oiD" id="e9A-se-89g"/>
+                        <outlet property="publishBtn" destination="CiY-Mw-shT" id="jXf-jb-HcC"/>
+                        <outlet property="startDateTxt" destination="obJ-wa-Yfs" id="BmD-xe-Usj"/>
+                        <outlet property="titleTxt" destination="b8e-nT-FXy" id="H7p-EI-R6G"/>
                         <outlet property="uploadBtn" destination="nvf-aZ-6h7" id="Buc-iA-SLB"/>
                     </connections>
                 </viewController>

@@ -30,6 +30,7 @@
 		F4C7481F23E96ED200345358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C7481D23E96ED200345358 /* LaunchScreen.storyboard */; };
 		F4C7482A23E96ED300345358 /* Kavindu_COBSCCOMP18P_023Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7482923E96ED300345358 /* Kavindu_COBSCCOMP18P_023Tests.swift */; };
 		F4C7483523E96ED300345358 /* Kavindu_COBSCCOMP18P_023UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7483423E96ED300345358 /* Kavindu_COBSCCOMP18P_023UITests.swift */; };
+		F4F686BA23EEB28D00A58307 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F686B923EEB28D00A58307 /* Event.swift */; };
 		FF20BF8F7D879007B6099280 /* Pods_Kavindu_COBSCCOMP18P_023.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ED74B95C74DD0E6AE03201 /* Pods_Kavindu_COBSCCOMP18P_023.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		F4C7483023E96ED300345358 /* Kavindu-COBSCCOMP18P-023UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kavindu-COBSCCOMP18P-023UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C7483423E96ED300345358 /* Kavindu_COBSCCOMP18P_023UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kavindu_COBSCCOMP18P_023UITests.swift; sourceTree = "<group>"; };
 		F4C7483623E96ED300345358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F686B923EEB28D00A58307 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F999BD5A0DAB52A629B19236 /* Pods-Kavindu-COBSCCOMP18P-023Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023Tests.debug.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023Tests/Pods-Kavindu-COBSCCOMP18P-023Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA31FB2BFA4B4BD607D13AF9 /* Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests.debug.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests/Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,7 @@
 		F4C7481323E96ED200345358 /* Kavindu-COBSCCOMP18P-023 */ = {
 			isa = PBXGroup;
 			children = (
+				F4F686B823EEB26500A58307 /* Models */,
 				F4B1955B23E9E0B200D75DB9 /* GoogleService-Info.plist */,
 				F4B1955123E9D29E00D75DB9 /* Images */,
 				F4B1951B23E9CF3200D75DB9 /* ViewControllers */,
@@ -261,6 +264,14 @@
 				F4C7483623E96ED300345358 /* Info.plist */,
 			);
 			path = "Kavindu-COBSCCOMP18P-023UITests";
+			sourceTree = "<group>";
+		};
+		F4F686B823EEB26500A58307 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4F686B923EEB28D00A58307 /* Event.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +524,7 @@
 				F4B1956723EBB4F900D75DB9 /* AddEventViewController.swift in Sources */,
 				F4B1955A23E9D83700D75DB9 /* LoginController.swift in Sources */,
 				F4B1957023EC09DC00D75DB9 /* AddEventDetailViewController.swift in Sources */,
+				F4F686BA23EEB28D00A58307 /* Event.swift in Sources */,
 				F4B1956023E9FC9300D75DB9 /* MainTabController.swift in Sources */,
 				F4C7481523E96ED200345358 /* AppDelegate.swift in Sources */,
 				F4B1956523EBB4EB00D75DB9 /* ProfileViewController.swift in Sources */,
