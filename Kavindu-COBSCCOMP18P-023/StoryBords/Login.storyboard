@@ -71,7 +71,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Join With Us"/>
                                 <connections>
-                                    <segue destination="JQg-jF-upF" kind="show" id="Y7Y-WT-Y2p"/>
+                                    <segue destination="JQg-jF-upF" kind="show" id="cTy-uD-DdF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to NIBM Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aul-Ee-PfZ">
@@ -125,30 +125,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7v-2a-HcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2256.521739130435" y="-297.32142857142856"/>
+            <point key="canvasLocation" x="4076.811594202899" y="-297.32142857142856"/>
         </scene>
         <!--SignUp Controller-->
         <scene sceneID="ey5-Lg-Fa0">
             <objects>
-                <viewController id="JQg-jF-upF" userLabel="SignUp Controller" customClass="SignUpController" customModule="Kavindu_COBSCCOMP18P_023" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="JQg-jF-upF" userLabel="SignUp Controller" customClass="SignUpController" customModule="Kavindu_COBSCCOMP18P_023" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xfi-jP-3vF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXh-1w-zGu">
-                                <rect key="frame" x="81" y="158" width="252" height="55"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
-                                <color key="textColor" red="0.13810865419999999" green="0.32682179989999999" blue="0.80187011669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18b-3D-C5P">
-                                <rect key="frame" x="151" y="103" width="112" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18b-3D-C5P" userLabel="Let's">
+                                <rect key="frame" x="151" y="118" width="112" height="55"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
                                 <color key="textColor" red="0.13810865417617044" green="0.32682179992456184" blue="0.80187011671522845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXh-1w-zGu">
+                                <rect key="frame" x="81" y="178" width="252" height="55"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                <color key="textColor" red="0.13810865419999999" green="0.32682179989999999" blue="0.80187011669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="A70-zr-fxW">
-                                <rect key="frame" x="10" y="372" width="394" height="325"/>
+                                <rect key="frame" x="10" y="392" width="394" height="325"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Email" textAlignment="natural" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="gGB-xd-PyY">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
@@ -194,17 +194,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing i accept NIBM Events terms of service and have read the privacy and policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-cc-Atf">
-                                <rect key="frame" x="10" y="707" width="394" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="58W-Y0-NeL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up to see whats happning in NIBM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-ak-yX7">
-                                <rect key="frame" x="33" y="233" width="349" height="89"/>
+                                <rect key="frame" x="33" y="253" width="349" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="6Q3-pv-w4N"/>
                                     <constraint firstAttribute="width" constant="349" id="n4s-gg-zS4"/>
@@ -212,14 +203,23 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing i accept NIBM Events terms of service and have read the privacy and policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-cc-Atf">
+                                <rect key="frame" x="10" y="727" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="58W-Y0-NeL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="18b-3D-C5P" firstAttribute="top" secondItem="4Zx-kR-nyW" secondAttribute="top" constant="15" id="7kf-a8-fcQ"/>
+                            <constraint firstItem="18b-3D-C5P" firstAttribute="top" secondItem="4Zx-kR-nyW" secondAttribute="top" constant="30" id="7kf-a8-fcQ"/>
                             <constraint firstItem="4Zx-kR-nyW" firstAttribute="trailing" secondItem="A70-zr-fxW" secondAttribute="trailing" constant="10" id="8Vn-z5-O09"/>
                             <constraint firstItem="5JS-cc-Atf" firstAttribute="top" secondItem="A70-zr-fxW" secondAttribute="bottom" constant="380" id="9pg-7R-mFc"/>
                             <constraint firstItem="4Zx-kR-nyW" firstAttribute="trailing" secondItem="vDY-ak-yX7" secondAttribute="trailing" constant="32" id="AfW-yS-rbf"/>
-                            <constraint firstItem="wXh-1w-zGu" firstAttribute="top" secondItem="4Zx-kR-nyW" secondAttribute="top" constant="70" id="Eds-nb-zd5"/>
+                            <constraint firstItem="wXh-1w-zGu" firstAttribute="top" secondItem="18b-3D-C5P" secondAttribute="bottom" constant="5" id="Eds-nb-zd5"/>
                             <constraint firstItem="vDY-ak-yX7" firstAttribute="leading" secondItem="4Zx-kR-nyW" secondAttribute="leading" constant="33" id="LbP-Q2-E31"/>
                             <constraint firstItem="vDY-ak-yX7" firstAttribute="top" secondItem="wXh-1w-zGu" secondAttribute="bottom" constant="20" id="Lvi-gy-vFw"/>
                             <constraint firstItem="4Zx-kR-nyW" firstAttribute="trailing" secondItem="wXh-1w-zGu" secondAttribute="trailing" constant="81" id="MLy-Sd-UBa"/>
@@ -237,26 +237,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfh-OH-L64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3207.2463768115945" y="-293.30357142857139"/>
+            <point key="canvasLocation" x="4848" y="-297"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="FhR-Tj-G41">
+        <!--Navigation Controller-->
+        <scene sceneID="Y2A-gz-5xD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eh9-w7-DUe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6s9-pZ-Ae2"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4qu-wF-dpF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lrD-F8-mAQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wov-v5-ksg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ebb-rr-AJL" kind="relationship" relationship="rootViewController" id="FAb-EG-NpD"/>
+                        <segue destination="Ebb-rr-AJL" kind="relationship" relationship="rootViewController" id="l0u-Tx-fAu"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ln-vA-dlG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhh-8F-gYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1346.376811594203" y="-297.32142857142856"/>
+            <point key="canvasLocation" x="3166.666666666667" y="-297.32142857142856"/>
         </scene>
     </scenes>
     <resources>

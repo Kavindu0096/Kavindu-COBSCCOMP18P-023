@@ -14,6 +14,15 @@
 		F4B1955A23E9D83700D75DB9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1955923E9D83700D75DB9 /* LoginController.swift */; };
 		F4B1955C23E9E0B200D75DB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4B1955B23E9E0B200D75DB9 /* GoogleService-Info.plist */; };
 		F4B1955E23E9EE2100D75DB9 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1955D23E9EE2100D75DB9 /* SignUpController.swift */; };
+		F4B1956023E9FC9300D75DB9 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1955F23E9FC9300D75DB9 /* MainTabController.swift */; };
+		F4B1956323EBB4D800D75DB9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1956223EBB4D800D75DB9 /* HomeViewController.swift */; };
+		F4B1956523EBB4EB00D75DB9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1956423EBB4EB00D75DB9 /* ProfileViewController.swift */; };
+		F4B1956723EBB4F900D75DB9 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1956623EBB4F900D75DB9 /* AddEventViewController.swift */; };
+		F4B1956A23EBDF1A00D75DB9 /* home-run.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B1956923EBDF1A00D75DB9 /* home-run.png */; };
+		F4B1956D23EBE04800D75DB9 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B1956B23EBE04800D75DB9 /* plus.png */; };
+		F4B1956E23EBE04800D75DB9 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B1956C23EBE04800D75DB9 /* user.png */; };
+		F4B1957023EC09DC00D75DB9 /* AddEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1956F23EC09DC00D75DB9 /* AddEventDetailViewController.swift */; };
+		F4B1957323EC121300D75DB9 /* plusL.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B1957223EC121200D75DB9 /* plusL.png */; };
 		F4C7481523E96ED200345358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7481423E96ED200345358 /* AppDelegate.swift */; };
 		F4C7481723E96ED200345358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7481623E96ED200345358 /* ViewController.swift */; };
 		F4C7481A23E96ED200345358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C7481823E96ED200345358 /* Main.storyboard */; };
@@ -54,6 +63,15 @@
 		F4B1955923E9D83700D75DB9 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F4B1955B23E9E0B200D75DB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F4B1955D23E9EE2100D75DB9 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		F4B1955F23E9FC9300D75DB9 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		F4B1956223EBB4D800D75DB9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F4B1956423EBB4EB00D75DB9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F4B1956623EBB4F900D75DB9 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		F4B1956923EBDF1A00D75DB9 /* home-run.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-run.png"; sourceTree = "<group>"; };
+		F4B1956B23EBE04800D75DB9 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		F4B1956C23EBE04800D75DB9 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		F4B1956F23EC09DC00D75DB9 /* AddEventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventDetailViewController.swift; sourceTree = "<group>"; };
+		F4B1957223EC121200D75DB9 /* plusL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusL.png; sourceTree = "<group>"; };
 		F4C7481123E96ED200345358 /* Kavindu-COBSCCOMP18P-023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kavindu-COBSCCOMP18P-023.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C7481423E96ED200345358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C7481623E96ED200345358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +152,7 @@
 		F4B1951B23E9CF3200D75DB9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4B1956123EBB45B00D75DB9 /* TabBarControllers */,
 				F4B1955923E9D83700D75DB9 /* LoginController.swift */,
 				F4C7481623E96ED200345358 /* ViewController.swift */,
 				F4B1955D23E9EE2100D75DB9 /* SignUpController.swift */,
@@ -144,6 +163,8 @@
 		F4B1955123E9D29E00D75DB9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F4B1957123EC121200D75DB9 /* MainSB */,
+				F4B1956823EBDF1A00D75DB9 /* TaBIcons */,
 				F4B1955223E9D29E00D75DB9 /* loginSB */,
 			);
 			path = Images;
@@ -155,6 +176,36 @@
 				F4B1955323E9D2AF00D75DB9 /* National_Institute_of_Business_Management_Logo.png */,
 			);
 			path = loginSB;
+			sourceTree = "<group>";
+		};
+		F4B1956123EBB45B00D75DB9 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4B1955F23E9FC9300D75DB9 /* MainTabController.swift */,
+				F4B1956223EBB4D800D75DB9 /* HomeViewController.swift */,
+				F4B1956423EBB4EB00D75DB9 /* ProfileViewController.swift */,
+				F4B1956623EBB4F900D75DB9 /* AddEventViewController.swift */,
+				F4B1956F23EC09DC00D75DB9 /* AddEventDetailViewController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		F4B1956823EBDF1A00D75DB9 /* TaBIcons */ = {
+			isa = PBXGroup;
+			children = (
+				F4B1956B23EBE04800D75DB9 /* plus.png */,
+				F4B1956C23EBE04800D75DB9 /* user.png */,
+				F4B1956923EBDF1A00D75DB9 /* home-run.png */,
+			);
+			path = TaBIcons;
+			sourceTree = "<group>";
+		};
+		F4B1957123EC121200D75DB9 /* MainSB */ = {
+			isa = PBXGroup;
+			children = (
+				F4B1957223EC121200D75DB9 /* plusL.png */,
+			);
+			path = MainSB;
 			sourceTree = "<group>";
 		};
 		F4C7480823E96ED200345358 = {
@@ -323,10 +374,14 @@
 			files = (
 				F4C7481F23E96ED200345358 /* LaunchScreen.storyboard in Resources */,
 				F4B1955023E9D22600D75DB9 /* Login.storyboard in Resources */,
+				F4B1957323EC121300D75DB9 /* plusL.png in Resources */,
+				F4B1956E23EBE04800D75DB9 /* user.png in Resources */,
 				F4B1955423E9D2AF00D75DB9 /* National_Institute_of_Business_Management_Logo.png in Resources */,
 				F4C7481C23E96ED200345358 /* Assets.xcassets in Resources */,
 				F4C7481A23E96ED200345358 /* Main.storyboard in Resources */,
 				F4B1955C23E9E0B200D75DB9 /* GoogleService-Info.plist in Resources */,
+				F4B1956A23EBDF1A00D75DB9 /* home-run.png in Resources */,
+				F4B1956D23EBE04800D75DB9 /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,9 +510,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C7481723E96ED200345358 /* ViewController.swift in Sources */,
+				F4B1956723EBB4F900D75DB9 /* AddEventViewController.swift in Sources */,
 				F4B1955A23E9D83700D75DB9 /* LoginController.swift in Sources */,
+				F4B1957023EC09DC00D75DB9 /* AddEventDetailViewController.swift in Sources */,
+				F4B1956023E9FC9300D75DB9 /* MainTabController.swift in Sources */,
 				F4C7481523E96ED200345358 /* AppDelegate.swift in Sources */,
+				F4B1956523EBB4EB00D75DB9 /* ProfileViewController.swift in Sources */,
 				F4B1955E23E9EE2100D75DB9 /* SignUpController.swift in Sources */,
+				F4B1956323EBB4D800D75DB9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
