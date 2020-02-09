@@ -40,6 +40,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Q4P-t5-icB"/>
                                         </constraints>
                                         <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voM-fE-B1u">
@@ -71,7 +72,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Join With Us"/>
                                 <connections>
-                                    <segue destination="JQg-jF-upF" kind="show" id="cTy-uD-DdF"/>
+                                    <segue destination="JQg-jF-upF" kind="show" id="mSu-Fw-VNW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to NIBM Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aul-Ee-PfZ">
@@ -117,7 +118,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fKc-va-NDH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XGH-cY-33j"/>
+                    <navigationItem key="navigationItem" id="Cim-Lz-8vw"/>
                     <connections>
                         <outlet property="emailTxt" destination="Mrl-QU-KeC" id="2xC-xw-K3k"/>
                         <outlet property="pwTxt" destination="dSN-hY-zjG" id="z7F-ig-TJ1"/>
@@ -148,7 +149,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="A70-zr-fxW">
-                                <rect key="frame" x="10" y="392" width="394" height="325"/>
+                                <rect key="frame" x="10" y="392" width="394" height="415"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Email" textAlignment="natural" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="gGB-xd-PyY">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
@@ -159,8 +160,17 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Password" textAlignment="natural" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="4ak-rP-ewN">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" User Name" textAlignment="natural" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="GAg-cS-CKo">
                                         <rect key="frame" x="0.0" y="90" width="394" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0Gl-pP-CVu"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Password" textAlignment="natural" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="4ak-rP-ewN">
+                                        <rect key="frame" x="0.0" y="180" width="394" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6qt-2U-Luh"/>
                                         </constraints>
@@ -169,7 +179,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Re-Password" textAlignment="natural" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="VOQ-XQ-M8p">
-                                        <rect key="frame" x="0.0" y="180" width="394" height="50"/>
+                                        <rect key="frame" x="0.0" y="270" width="394" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8od-Qx-vgu"/>
                                         </constraints>
@@ -178,7 +188,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-nZ-T6F">
-                                        <rect key="frame" x="0.0" y="270" width="394" height="55"/>
+                                        <rect key="frame" x="0.0" y="360" width="394" height="55"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="9Y9-d0-rwb"/>
@@ -190,6 +200,7 @@
                                         </state>
                                         <connections>
                                             <action selector="signInBtn:" destination="Ebb-rr-AJL" eventType="touchUpInside" id="bfv-aH-lCb"/>
+                                            <action selector="signUpBtnTapped:" destination="JQg-jF-upF" eventType="touchUpInside" id="GeI-bu-2gb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -204,7 +215,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing i accept NIBM Events terms of service and have read the privacy and policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-cc-Atf">
-                                <rect key="frame" x="10" y="727" width="394" height="50"/>
+                                <rect key="frame" x="10" y="817" width="394" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="58W-Y0-NeL"/>
                                 </constraints>
@@ -234,10 +245,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Zx-kR-nyW"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="gGB-xd-PyY" id="k5b-59-cVm"/>
+                        <outlet property="passwordTxt" destination="4ak-rP-ewN" id="tIV-PB-NUu"/>
+                        <outlet property="rePasswordTxt" destination="VOQ-XQ-M8p" id="RPF-XG-JG0"/>
+                        <outlet property="signUpBtn" destination="pDe-nZ-T6F" id="kKM-s1-jXk"/>
+                        <outlet property="userNameTxt" destination="GAg-cS-CKo" id="SSu-mV-XyA"/>
+                    </connections>
                 </viewController>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Email" textAlignment="natural" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="enj-iS-DQ8">
+                    <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="qct-MC-2Qg"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfh-OH-L64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4848" y="-297"/>
+            <point key="canvasLocation" x="5691" y="-321"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y2A-gz-5xD">
