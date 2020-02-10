@@ -10,6 +10,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+
+    
+    
+    @IBOutlet weak var loginBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,5 +30,14 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+   
+    @IBAction func loginBtnTapped(_ sender: Any) {
+        let loginSB=UIStoryboard(name: "Login", bundle: Bundle.main)
+        
+        guard let loginVC=loginSB.instantiateViewController(withIdentifier: "LoginController") as? LoginController else{
+            return
+        }
+        present(loginVC, animated: true, completion: nil)
+    }
+    
 }

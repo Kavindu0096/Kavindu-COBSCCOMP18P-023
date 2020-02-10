@@ -22,6 +22,10 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
     @IBOutlet weak var displayImg: UIImageView!
     @IBOutlet weak var uploadBtn: UIButton!
     @IBOutlet weak var publishBtn: UIButton!
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+    @IBOutlet weak var endDatePicker: UIDatePicker!
+    
+    @IBOutlet weak var oneDayEventSwitch: UISwitch!
     
     let defaults = UserDefaults.standard
     static var eventArray:[Event]=[]
@@ -85,7 +89,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
             //            endDate:dateFormatter.date(from:endDateTxt.text!)!,
             startingdate:now,
             endDate:now,
-            oneDayEvent:0,
+            oneDayEvent:oneDayEventSwitch.isOn ? 1 :  0,
             description:descriptionTxt.text ?? "",
             oranizedBy:oraganizedByTxt.text ?? ""
         )
@@ -142,6 +146,9 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
             }
         }
         
+    }
+    
+    @IBAction func onedayEventSwitchvalueChanged(_ sender: Any) {
     }
     
 }

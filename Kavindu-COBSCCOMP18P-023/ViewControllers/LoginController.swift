@@ -13,6 +13,10 @@ class LoginController: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     
     @IBOutlet weak var pwTxt: UITextField!
+
+    @IBOutlet weak var registerBtn: UIButton!
+    @IBOutlet weak var backBtn: UIButton!
+    let common=Common()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,19 +33,47 @@ class LoginController: UIViewController {
                 return
         }
             else{
-                let user=authResult
+               
+            guard let uId=authResult?.user.uid else{return}
+            self.common.setUserUid(userUid: uId)
+            let mainSB=UIStoryboard(name: "Main", bundle: Bundle.main)
+            guard let mainVC=mainSB.instantiateViewController(withIdentifier: "MainTabController") as? MainTabController else{return}
+            self.present(mainVC, animated: true, completion: nil)
+            
             }
     }
     }
   
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func backNavBtnTapped(_ sender: Any) {
+        let loginSB=UIStoryboard(name: "Login", bundle: Bundle.main)
+        
+        guard let loginVC=loginSB.instantiateViewController(withIdentifier: "LoginController") as? LoginController else{
+            return
+        }
+        present(loginVC, animated: true, completion: nil)
     }
-    */
+    
+    
+    @IBAction func registerBtnTapped(_ sender: Any) {}
 
+        
+    @IBAction func backBtnTapped(_ sender: Any) {
+        
+        let mainSB=UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let mainVC=mainSB.instantiateViewController(withIdentifier: "MainTabController") as? MainTabController else{
+            return
+        }
+        mainVC.modalTransitionStyle=UIModalTransitionStyle.partialCurl
+        present(mainVC, animated: true, completion: nil)
+    }
+    
+    
 }
+    
+    
+

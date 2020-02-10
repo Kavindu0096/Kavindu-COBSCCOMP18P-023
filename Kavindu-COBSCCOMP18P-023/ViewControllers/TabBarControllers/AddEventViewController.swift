@@ -7,16 +7,34 @@
 //
 
 import UIKit
+import Firebase
 
 class AddEventViewController: UIViewController {
 
+    let common=Common()
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       
+        validateLogin()
+       
+    }
+//    override func viewDidAppear(_ animated: Bool) {
+//       // validateLogin()
+//    }
+    func validateLogin(){
+        if Auth.auth().currentUser==nil{
+         
+            let loginSB=UIStoryboard(name: "Login", bundle: Bundle.main)
+            guard let loginVC=loginSB.instantiateViewController(withIdentifier: "LoginController") as? LoginController  else {return}
+            self.present(loginVC, animated: true, completion:nil)
+        }
+        else {
+             super.viewDidLoad()
+            guard let uId=Auth.auth().currentUser?.uid else{return}
+            common.setUserUid(userUid: uId)
+           
+        }
     }
     
-
     /*
     // MARK: - Navigation
 

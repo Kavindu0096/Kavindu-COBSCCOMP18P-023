@@ -8,15 +8,21 @@
 
 import Foundation
 
-struct User:Codable{
+struct User:Hashable{
     
-    var Email:String
-    var UserName:String
+    var email:String
+    var userName:String
     
     init(Email:String,UserName:String){
         
-        self.Email=Email
-        self.UserName=UserName
+        self.email=Email
+        self.userName=UserName
+    }
+    var asDictinary:[String:Any]{
+        return[
+            "email":email,
+            "userName":userName
+        ]
     }
     
 }

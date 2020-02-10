@@ -33,6 +33,8 @@
 		F4F686BA23EEB28D00A58307 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F686B923EEB28D00A58307 /* Event.swift */; };
 		F4F686BD23F0087400A58307 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F686BC23F0087400A58307 /* Alert.swift */; };
 		F4F686BF23F00EC300A58307 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F686BE23F00EC300A58307 /* User.swift */; };
+		F4F686C123F0348100A58307 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F686C023F0348100A58307 /* Common.swift */; };
+		F4F686C323F11E7F00A58307 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F686C223F11E7E00A58307 /* back.png */; };
 		FF20BF8F7D879007B6099280 /* Pods_Kavindu_COBSCCOMP18P_023.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ED74B95C74DD0E6AE03201 /* Pods_Kavindu_COBSCCOMP18P_023.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,8 @@
 		F4F686B923EEB28D00A58307 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F4F686BC23F0087400A58307 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F4F686BE23F00EC300A58307 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F4F686C023F0348100A58307 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		F4F686C223F11E7E00A58307 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = ../../../../../Downloads/back.png; sourceTree = "<group>"; };
 		F999BD5A0DAB52A629B19236 /* Pods-Kavindu-COBSCCOMP18P-023Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023Tests.debug.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023Tests/Pods-Kavindu-COBSCCOMP18P-023Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA31FB2BFA4B4BD607D13AF9 /* Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests.debug.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests/Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +251,7 @@
 				F4B1951A23E9CF0600D75DB9 /* StoryBords */,
 				F4C7481423E96ED200345358 /* AppDelegate.swift */,
 				F4C7481B23E96ED200345358 /* Assets.xcassets */,
+				F4F686C223F11E7E00A58307 /* back.png */,
 				F4C7481D23E96ED200345358 /* LaunchScreen.storyboard */,
 				F4C7482023E96ED200345358 /* Info.plist */,
 			);
@@ -284,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F686BC23F0087400A58307 /* Alert.swift */,
+				F4F686C023F0348100A58307 /* Common.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 				F4B1955423E9D2AF00D75DB9 /* National_Institute_of_Business_Management_Logo.png in Resources */,
 				F4C7481C23E96ED200345358 /* Assets.xcassets in Resources */,
 				F4C7481A23E96ED200345358 /* Main.storyboard in Resources */,
+				F4F686C323F11E7F00A58307 /* back.png in Resources */,
 				F4B1955C23E9E0B200D75DB9 /* GoogleService-Info.plist in Resources */,
 				F4B1956A23EBDF1A00D75DB9 /* home-run.png in Resources */,
 				F4B1956D23EBE04800D75DB9 /* plus.png in Resources */,
@@ -536,6 +543,7 @@
 			files = (
 				F4C7481723E96ED200345358 /* ViewController.swift in Sources */,
 				F4B1956723EBB4F900D75DB9 /* AddEventViewController.swift in Sources */,
+				F4F686C123F0348100A58307 /* Common.swift in Sources */,
 				F4B1955A23E9D83700D75DB9 /* LoginController.swift in Sources */,
 				F4B1957023EC09DC00D75DB9 /* AddEventDetailViewController.swift in Sources */,
 				F4F686BA23EEB28D00A58307 /* Event.swift in Sources */,

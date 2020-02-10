@@ -10,6 +10,7 @@ target 'Kavindu-COBSCCOMP18P-023' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'Firebase/Database'
 
   target 'Kavindu-COBSCCOMP18P-023Tests' do
     inherit! :search_paths
