@@ -24,7 +24,10 @@ class Common :Encodable{
     func setUserUid(userUid:Any){
          UserDefaults.standard.set(userUid,forKey: "userUid")
     }
-
+    func getUserUid() -> String{
+        let uId=UserDefaults.standard.string(forKey: "userUid") ?? "0"
+        return  String(uId)
+    }
    
     
 }

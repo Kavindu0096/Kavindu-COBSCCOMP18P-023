@@ -47,9 +47,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biS-wW-ivV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biS-wW-ivV">
                                 <rect key="frame" x="331" y="735" width="63" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="plusL.png"/>
                                 <connections>
                                     <segue destination="yuA-SE-hEF" kind="show" id="qDU-dL-geZ"/>
@@ -57,6 +56,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="46i-LG-4HT" firstAttribute="bottom" secondItem="biS-wW-ivV" secondAttribute="bottom" constant="15" id="Mbu-tx-Bp7"/>
+                            <constraint firstItem="biS-wW-ivV" firstAttribute="leading" secondItem="46i-LG-4HT" secondAttribute="leading" constant="331" id="eHy-0H-z1M"/>
+                            <constraint firstItem="biS-wW-ivV" firstAttribute="top" secondItem="46i-LG-4HT" secondAttribute="top" constant="647" id="g2K-nG-IRO"/>
+                            <constraint firstItem="46i-LG-4HT" firstAttribute="trailing" secondItem="biS-wW-ivV" secondAttribute="trailing" constant="20" id="kle-vq-yo3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="46i-LG-4HT"/>
                     </view>
                     <navigationItem key="navigationItem" id="nkE-pd-FfI"/>

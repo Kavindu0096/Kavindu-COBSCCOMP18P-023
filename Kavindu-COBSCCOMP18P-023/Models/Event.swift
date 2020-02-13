@@ -29,4 +29,16 @@ struct Event:Codable{
         self.oranizedBy=oranizedBy
     }
     
+    var asDictinary:[String:Any]{
+        return[
+            "id":id,
+            "title":title ?? "",
+            "displayImageUrl":displayImageUrl  ?? "",
+            "startingdate":startingdate  ?? "",
+            "endDate":endDate  ?? "",
+            "oneDayEvent":oneDayEvent  ?? "",
+            "description":description  ?? "",
+            "oranizedBy":oranizedBy  ?? "",
+        ]
+    }
 }

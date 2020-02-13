@@ -10,139 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
-            timestampString = "603036587.439646"
+            timestampString = "603128089.27107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "publishBtnTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
-            timestampString = "603036587.440109"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "publishBtnTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
-            timestampString = "603036587.440378"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "publishBtnTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
-            timestampString = "603036587.440657"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "publishBtnTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
-            timestampString = "603036587.443468"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "publishBtnTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
-            timestampString = "603036587.44405"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "publishBtnTapped(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Kavindu_COBSCCOMP18P_023.AddEventDetailViewController.publishBtnTapped(Any) -&gt; ()"
-                  moduleName = "Kavindu-COBSCCOMP18P-023"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yasiththathsarasenarathne/Documents/Kavindu/IOSCW/Kavindu-COBSCCOMP18P-023/Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
-                  timestampString = "603036587.821901"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "833">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Kavindu_COBSCCOMP18P_023.AddEventDetailViewController.publishBtnTapped(Any) -&gt; ()"
-                  moduleName = "Kavindu-COBSCCOMP18P-023"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yasiththathsarasenarathne/Documents/Kavindu/IOSCW/Kavindu-COBSCCOMP18P-023/Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
-                  timestampString = "603036587.823617"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "230">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
-            timestampString = "603036587.445968"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "publishBtnTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kavindu-COBSCCOMP18P-023/Helpers/Common.swift"
-            timestampString = "603036587.446465"
+            timestampString = "603128089.276841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -170,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/SignUpController.swift"
-            timestampString = "603036587.446564"
+            timestampString = "603128089.277276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -186,7 +58,7 @@
                   moduleName = "Kavindu-COBSCCOMP18P-023"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yasiththathsarasenarathne/Documents/Kavindu/IOSCW/Kavindu-COBSCCOMP18P-023/Kavindu-COBSCCOMP18P-023/ViewControllers/SignUpController.swift"
-                  timestampString = "603036587.836804"
+                  timestampString = "603128092.5818011"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
@@ -201,7 +73,7 @@
                   moduleName = "Kavindu-COBSCCOMP18P-023"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yasiththathsarasenarathne/Documents/Kavindu/IOSCW/Kavindu-COBSCCOMP18P-023/Kavindu-COBSCCOMP18P-023/ViewControllers/SignUpController.swift"
-                  timestampString = "603036587.838519"
+                  timestampString = "603128092.590768"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "69"
@@ -218,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/SignUpController.swift"
-            timestampString = "603036587.446668"
+            timestampString = "603128089.279079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
@@ -234,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/SignUpController.swift"
-            timestampString = "603036587.446754"
+            timestampString = "603128089.281743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -250,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/SignUpController.swift"
-            timestampString = "603036587.4468451"
+            timestampString = "603128089.282797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -266,13 +138,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/SignUpController.swift"
-            timestampString = "603036587.446918"
+            timestampString = "603128089.2833329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
             landmarkName = "SignUpController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
+            timestampString = "603128089.285197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "addEvent(imgUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kavindu-COBSCCOMP18P-023/ViewControllers/TabBarControllers/AddEventDetailViewController.swift"
+            timestampString = "603128089.2854429"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "addEvent(imgUrl:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

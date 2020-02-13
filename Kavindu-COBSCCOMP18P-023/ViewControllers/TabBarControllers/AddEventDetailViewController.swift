@@ -29,7 +29,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
     
     let defaults = UserDefaults.standard
     static var eventArray:[Event]=[]
-    
+    let common=Common()
     override func viewDidLoad() {
         super.viewDidLoad()
         initEvent()
@@ -38,14 +38,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
     
     
     
-    @IBAction func uploadBtnTapped(_ sender: Any) {
-        let imgPickerController=UIImagePickerController()
-        imgPickerController.delegate=self;
-        imgPickerController.sourceType=UIImagePickerController.SourceType.photoLibrary
-        self.present(imgPickerController, animated: true, completion: nil)
-        
-        
-    }
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         
@@ -64,6 +57,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
         dismiss(animated: true, completion: nil)
     }
     func initEvent(){
+        startDatePicker.minimumDate=Date()
         if let data = UserDefaults.standard.object(forKey:"Events") as? Data {
             AddEventDetailViewController.eventArray = try! PropertyListDecoder().decode(Array<Event>.self, from: data)
             //            print(AddEventDetailViewController.eventArray)
@@ -84,15 +78,28 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
         let event = Event.init(
             id: Int(maxId)+1,
             title:titleTxt.text!,
-            displayImageUrl:imgUrl ?? "",
+            displayImageUrl:imgUrl ,
             //            startingdate:dateFormatter.date(from:startDateTxt.text!)!,
             //            endDate:dateFormatter.date(from:endDateTxt.text!)!,
-            startingdate:now,
+            startingdate:startDatePicker.date,
             endDate:now,
             oneDayEvent:oneDayEventSwitch.isOn ? 1 :  0,
             description:descriptionTxt.text ?? "",
             oranizedBy:oraganizedByTxt.text ?? ""
         )
+         let userUid=common.getUserUid()
+        if userUid != "" {
+            
+            Database.database().reference().child("Events").child(userUid).setValue(event.asDictinary) {
+                (error:Error?, ref:DatabaseReference) in
+                if let error = error {
+                    print("Data could not be saved: \(error).")
+                } else {
+                    print("Data saved successfully!")
+                }
+            }
+        }
+        
         AddEventDetailViewController.eventArray.append(event)
         let er=try? PropertyListEncoder().encode(AddEventDetailViewController.eventArray)
         
@@ -100,6 +107,15 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
         
     }
     
+    /// MARK-: Actions
+    @IBAction func uploadBtnTapped(_ sender: Any) {
+        let imgPickerController=UIImagePickerController()
+        imgPickerController.delegate=self;
+        imgPickerController.sourceType=UIImagePickerController.SourceType.photoLibrary
+        self.present(imgPickerController, animated: true, completion: nil)
+        
+        
+    }
     
     @IBAction func publishBtnTapped(_ sender: Any) {
         
@@ -107,23 +123,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
         let storageRef = Storage.storage().reference()
         let imagesRef = storageRef.child("1.png")
         let uploadData = displayImg.image?.pngData()
-//            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-//                guard metadata != nil else {
-//                    print(" Adding Error")
-//                    print(error ??  "")
-//                    return
-//                }
-//                imagesRef.downloadURL { (url, error2) in
-//                    guard let downloadURL = url else {
-//                        print(" Adding Error1")
-//                        print(error2 ?? "")
-//                        return
-//                    }
-//
-//                    self.addEvent(imgUrl: downloadURL.path)
-//
-//                }
-//            }
+
         let metaData=StorageMetadata()
         metaData.contentType="image/png"
         
@@ -149,6 +149,12 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
     }
     
     @IBAction func onedayEventSwitchvalueChanged(_ sender: Any) {
+        if oneDayEventSwitch.isOn{
+              endDatePicker.isEnabled=false
+        }
+        else{
+            endDatePicker.isEnabled=true
+        }
     }
     
 }
