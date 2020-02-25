@@ -11,14 +11,14 @@ import Foundation
 struct Event:Codable{
     var id:Int
     var title:String?
-    var startingdate:Date?
-    var endDate:Date?
+    var startingdate:String?
+    var endDate:String?
     var displayImageUrl:String?
     var oneDayEvent:boolean_t?
     var description:String?
     var oranizedBy:String?
     
-    init(id:Int,title:String,displayImageUrl:String,startingdate:Date,endDate:Date,oneDayEvent:boolean_t,description:String,oranizedBy:String) {
+    init(id:Int,title:String,displayImageUrl:String,startingdate:String,endDate:String,oneDayEvent:boolean_t,description:String,oranizedBy:String) {
         self.id=id
         self.title=title
         self.displayImageUrl=displayImageUrl

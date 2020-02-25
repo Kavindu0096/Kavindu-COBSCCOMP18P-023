@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "National_Institute_of_Business_Management_Logo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "back-2.png",
       "scale" : "2x"
     },
     {

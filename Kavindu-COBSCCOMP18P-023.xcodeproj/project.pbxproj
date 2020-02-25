@@ -10,7 +10,6 @@
 		5DF652D5B055098AC52A9404 /* Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B778B9D4D582A638879C97 /* Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework */; };
 		E0EADD5EEEBE0F12AF852E37 /* Pods_Kavindu_COBSCCOMP18P_023Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F03FB584F9CD70326C441E /* Pods_Kavindu_COBSCCOMP18P_023Tests.framework */; };
 		F4B1955023E9D22600D75DB9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1954F23E9D22600D75DB9 /* Login.storyboard */; };
-		F4B1955423E9D2AF00D75DB9 /* National_Institute_of_Business_Management_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B1955323E9D2AF00D75DB9 /* National_Institute_of_Business_Management_Logo.png */; };
 		F4B1955A23E9D83700D75DB9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1955923E9D83700D75DB9 /* LoginController.swift */; };
 		F4B1955C23E9E0B200D75DB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4B1955B23E9E0B200D75DB9 /* GoogleService-Info.plist */; };
 		F4B1955E23E9EE2100D75DB9 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1955D23E9EE2100D75DB9 /* SignUpController.swift */; };
@@ -18,11 +17,7 @@
 		F4B1956323EBB4D800D75DB9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1956223EBB4D800D75DB9 /* HomeViewController.swift */; };
 		F4B1956523EBB4EB00D75DB9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1956423EBB4EB00D75DB9 /* ProfileViewController.swift */; };
 		F4B1956723EBB4F900D75DB9 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1956623EBB4F900D75DB9 /* AddEventViewController.swift */; };
-		F4B1956A23EBDF1A00D75DB9 /* home-run.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B1956923EBDF1A00D75DB9 /* home-run.png */; };
-		F4B1956D23EBE04800D75DB9 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B1956B23EBE04800D75DB9 /* plus.png */; };
-		F4B1956E23EBE04800D75DB9 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B1956C23EBE04800D75DB9 /* user.png */; };
 		F4B1957023EC09DC00D75DB9 /* AddEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1956F23EC09DC00D75DB9 /* AddEventDetailViewController.swift */; };
-		F4B1957323EC121300D75DB9 /* plusL.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B1957223EC121200D75DB9 /* plusL.png */; };
 		F4C7481523E96ED200345358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7481423E96ED200345358 /* AppDelegate.swift */; };
 		F4C7481723E96ED200345358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7481623E96ED200345358 /* ViewController.swift */; };
 		F4C7481A23E96ED200345358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C7481823E96ED200345358 /* Main.storyboard */; };
@@ -34,7 +29,6 @@
 		F4F686BD23F0087400A58307 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F686BC23F0087400A58307 /* Alert.swift */; };
 		F4F686BF23F00EC300A58307 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F686BE23F00EC300A58307 /* User.swift */; };
 		F4F686C123F0348100A58307 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F686C023F0348100A58307 /* Common.swift */; };
-		F4F686C323F11E7F00A58307 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F686C223F11E7E00A58307 /* back.png */; };
 		FF20BF8F7D879007B6099280 /* Pods_Kavindu_COBSCCOMP18P_023.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ED74B95C74DD0E6AE03201 /* Pods_Kavindu_COBSCCOMP18P_023.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +58,6 @@
 		C6BA4198ED06D4727CB72E7A /* Pods-Kavindu-COBSCCOMP18P-023Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023Tests.release.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023Tests/Pods-Kavindu-COBSCCOMP18P-023Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E0E8D65F38BBE880CAB496CB /* Pods-Kavindu-COBSCCOMP18P-023.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023.debug.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023/Pods-Kavindu-COBSCCOMP18P-023.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B1954F23E9D22600D75DB9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		F4B1955323E9D2AF00D75DB9 /* National_Institute_of_Business_Management_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = National_Institute_of_Business_Management_Logo.png; path = ../../../../../../Downloads/National_Institute_of_Business_Management_Logo.png; sourceTree = "<group>"; };
 		F4B1955923E9D83700D75DB9 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F4B1955B23E9E0B200D75DB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F4B1955D23E9EE2100D75DB9 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -72,11 +65,7 @@
 		F4B1956223EBB4D800D75DB9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F4B1956423EBB4EB00D75DB9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F4B1956623EBB4F900D75DB9 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
-		F4B1956923EBDF1A00D75DB9 /* home-run.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-run.png"; sourceTree = "<group>"; };
-		F4B1956B23EBE04800D75DB9 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
-		F4B1956C23EBE04800D75DB9 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		F4B1956F23EC09DC00D75DB9 /* AddEventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventDetailViewController.swift; sourceTree = "<group>"; };
-		F4B1957223EC121200D75DB9 /* plusL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusL.png; sourceTree = "<group>"; };
 		F4C7481123E96ED200345358 /* Kavindu-COBSCCOMP18P-023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kavindu-COBSCCOMP18P-023.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C7481423E96ED200345358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C7481623E96ED200345358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +83,6 @@
 		F4F686BC23F0087400A58307 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F4F686BE23F00EC300A58307 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F4F686C023F0348100A58307 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		F4F686C223F11E7E00A58307 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = ../../../../../Downloads/back.png; sourceTree = "<group>"; };
 		F999BD5A0DAB52A629B19236 /* Pods-Kavindu-COBSCCOMP18P-023Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023Tests.debug.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023Tests/Pods-Kavindu-COBSCCOMP18P-023Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA31FB2BFA4B4BD607D13AF9 /* Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests.debug.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests/Pods-Kavindu-COBSCCOMP18P-023-Kavindu-COBSCCOMP18P-023UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,19 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				F4B1957123EC121200D75DB9 /* MainSB */,
-				F4B1956823EBDF1A00D75DB9 /* TaBIcons */,
-				F4B1955223E9D29E00D75DB9 /* loginSB */,
 			);
 			path = Images;
 			sourceTree = SOURCE_ROOT;
-		};
-		F4B1955223E9D29E00D75DB9 /* loginSB */ = {
-			isa = PBXGroup;
-			children = (
-				F4B1955323E9D2AF00D75DB9 /* National_Institute_of_Business_Management_Logo.png */,
-			);
-			path = loginSB;
-			sourceTree = "<group>";
 		};
 		F4B1956123EBB45B00D75DB9 /* TabBarControllers */ = {
 			isa = PBXGroup;
@@ -200,20 +178,9 @@
 			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
-		F4B1956823EBDF1A00D75DB9 /* TaBIcons */ = {
-			isa = PBXGroup;
-			children = (
-				F4B1956B23EBE04800D75DB9 /* plus.png */,
-				F4B1956C23EBE04800D75DB9 /* user.png */,
-				F4B1956923EBDF1A00D75DB9 /* home-run.png */,
-			);
-			path = TaBIcons;
-			sourceTree = "<group>";
-		};
 		F4B1957123EC121200D75DB9 /* MainSB */ = {
 			isa = PBXGroup;
 			children = (
-				F4B1957223EC121200D75DB9 /* plusL.png */,
 			);
 			path = MainSB;
 			sourceTree = "<group>";
@@ -251,7 +218,6 @@
 				F4B1951A23E9CF0600D75DB9 /* StoryBords */,
 				F4C7481423E96ED200345358 /* AppDelegate.swift */,
 				F4C7481B23E96ED200345358 /* Assets.xcassets */,
-				F4F686C223F11E7E00A58307 /* back.png */,
 				F4C7481D23E96ED200345358 /* LaunchScreen.storyboard */,
 				F4C7482023E96ED200345358 /* Info.plist */,
 			);
@@ -405,15 +371,9 @@
 			files = (
 				F4C7481F23E96ED200345358 /* LaunchScreen.storyboard in Resources */,
 				F4B1955023E9D22600D75DB9 /* Login.storyboard in Resources */,
-				F4B1957323EC121300D75DB9 /* plusL.png in Resources */,
-				F4B1956E23EBE04800D75DB9 /* user.png in Resources */,
-				F4B1955423E9D2AF00D75DB9 /* National_Institute_of_Business_Management_Logo.png in Resources */,
 				F4C7481C23E96ED200345358 /* Assets.xcassets in Resources */,
 				F4C7481A23E96ED200345358 /* Main.storyboard in Resources */,
-				F4F686C323F11E7F00A58307 /* back.png in Resources */,
 				F4B1955C23E9E0B200D75DB9 /* GoogleService-Info.plist in Resources */,
-				F4B1956A23EBDF1A00D75DB9 /* home-run.png in Resources */,
-				F4B1956D23EBE04800D75DB9 /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="National_Institute_of_Business_Management_Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xt4-mO-4Qr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="National_Institute_of_Business_Management_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Xt4-mO-4Qr">
                                 <rect key="frame" x="40" y="110" width="334" height="149"/>
                                 <color key="tintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -287,7 +287,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="National_Institute_of_Business_Management_Logo.png" width="300" height="172"/>
+        <image name="National_Institute_of_Business_Management_Logo" width="300" height="172"/>
         <image name="back2" width="12" height="12"/>
         <image name="home-run.png" width="24" height="24"/>
     </resources>

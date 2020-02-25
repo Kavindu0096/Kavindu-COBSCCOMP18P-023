@@ -11,12 +11,22 @@ import UIKit
 
 class Aleret:UIViewController{
 
-    func showAlert(title:String,message:String) {
+//    func showAlert(title:String,message:String) {
+//        let alert = UIAlertController(title: title, message:message, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+//
+//       self.present(alert, animated: true, completion: nil)
+//
+//    }
+    
+    
+      func showAlert(on vc:UIViewController,title:String,message:String) {
         let alert = UIAlertController(title: title, message:message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
-       
-       self.present(alert, animated: true, completion: nil)
-       
+        
+        vc.present(alert, animated: true, completion: nil)
+        
     }
 }
+
 

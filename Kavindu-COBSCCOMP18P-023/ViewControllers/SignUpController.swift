@@ -27,11 +27,11 @@ class SignUpController: UIViewController {
         
         let alert = Aleret()
         if emailTxt.text == nil || userNameTxt.text == nil || passwordTxt.text == nil || rePasswordTxt.text == nil{
-            alert.showAlert(title: "Invalid Fields", message: "Please fill all fields")
+          //  alert.showAlert(title: "Invalid Fields", message: "Please fill all fields")
             return false
         }
         if passwordTxt.text != rePasswordTxt.text{
-            alert.showAlert(title: "Invalid Fields", message: "Re-Passowrd don't  match")
+           // alert.showAlert(title: "Invalid Fields", message: "Re-Passowrd don't  match")
             return false
         }
         return true

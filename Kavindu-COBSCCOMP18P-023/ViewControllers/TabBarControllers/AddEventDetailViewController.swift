@@ -73,16 +73,18 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         
-        let now = Date()
+       let now = Date()
         let maxId=AddEventDetailViewController.eventArray.map({$0.id}).max() ?? 0
+      //  guard let startDate = startDatePicker.date else{ return Date.}
+        let endDate=oneDayEventSwitch.isOn ? startDatePicker.date : endDatePicker.date;
         let event = Event.init(
             id: Int(maxId)+1,
             title:titleTxt.text!,
             displayImageUrl:imgUrl ,
             //            startingdate:dateFormatter.date(from:startDateTxt.text!)!,
             //            endDate:dateFormatter.date(from:endDateTxt.text!)!,
-            startingdate:startDatePicker.date,
-            endDate:now,
+            startingdate:String(startDatePicker?.date.description ?? now.description) ,
+            endDate:String(endDate.description) ,
             oneDayEvent:oneDayEventSwitch.isOn ? 1 :  0,
             description:descriptionTxt.text ?? "",
             oranizedBy:oraganizedByTxt.text ?? ""
@@ -90,7 +92,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
          let userUid=common.getUserUid()
         if userUid != "" {
             
-            Database.database().reference().child("Events").child(userUid).setValue(event.asDictinary) {
+            Database.database().reference().child("Events").child(userUid).child(String(now.description)).setValue(event.asDictinary) {
                 (error:Error?, ref:DatabaseReference) in
                 if let error = error {
                     print("Data could not be saved: \(error).")
@@ -119,9 +121,10 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
     
     @IBAction func publishBtnTapped(_ sender: Any) {
         
-        //let data = Data()
+        let maxId=(AddEventDetailViewController.eventArray.map({$0.id}).max() ?? 0)+1
         let storageRef = Storage.storage().reference()
-        let imagesRef = storageRef.child("1.png")
+        let imageName = String(maxId.description)+","+".png";
+        let imagesRef = storageRef.child(imageName)
         let uploadData = displayImg.image?.pngData()
 
         let metaData=StorageMetadata()
@@ -142,7 +145,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
                     print(error ?? "")
                     return
                 }
-                 self.addEvent(imgUrl: downloadURL.path)
+                 self.addEvent(imgUrl: downloadURL.description)
             }
         }
         

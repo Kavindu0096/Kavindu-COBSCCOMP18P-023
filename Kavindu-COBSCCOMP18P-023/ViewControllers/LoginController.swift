@@ -24,14 +24,23 @@ class LoginController: UIViewController {
     }
     
     @IBAction func signInBtn(_ sender: Any) {
-        
+        //let alert = Aleret()
+    
         Auth.auth().signIn(withEmail: emailTxt.text!, password: pwTxt.text!) { (authResult, error ) in
            if error != nil {
+                //alert.showAlert(on: loginC, title: "Login Failed", message: "Please enter valid credential")
+                let alert = UIAlertController(title:"Login Failed", message: "Please Enter Valid Credential", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alert, animated: true, completion: nil)
+            
                 return
             }
             else if authResult==nil{
+                let alert = UIAlertController(title:"Login Failed", message: "Invalid User", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alert, animated: true, completion: nil)
                 return
-        }
+           }
             else{
                
             guard let uId=authResult?.user.uid else{return}
