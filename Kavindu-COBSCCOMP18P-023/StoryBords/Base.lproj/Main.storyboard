@@ -70,6 +70,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home-run.png" id="tbp-7Z-beN"/>
+                    <connections>
+                        <outlet property="eventsTblView" destination="13D-yO-8ea" id="Nzs-2r-wCg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,9 +13,11 @@ class HomeViewController:UIViewController, UITableViewDelegate,UITableViewDataSo
 
 
      let cellId="cellId"
-    let EventVal=[Event]()
+    
+    static var EventList:[Event]=[]
     
     @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var eventsTblView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchEvents()
@@ -47,57 +49,101 @@ class HomeViewController:UIViewController, UITableViewDelegate,UITableViewDataSo
         
         Database.database().reference().child("Events").observe(DataEventType.value) { (snapshot) in
             if snapshot.childrenCount>0{
-                if let dictionary:[String:AnyObject]=snapshot.value as? [String:AnyObject]{
-                   // print(dictionary)
-                     print(dictionary["value"])
+             
+                if let dictionary=snapshot.value as? [String:AnyObject]{
                     dictionary.values.forEach({ (vals) in
-                        let events=vals as? [String:AnyObject]
-                        events?.forEach({ (key, value) in
-                              let eventObj=value as? Event
-                           // var objCMutableArray = NSMutableArray(array: value)
-                          //  var swiftArray = objCMutableArray as NSArray as [String];
-                            print(key)
-                               print(value)
+                        guard let eventsvals = vals as? [String:[String:AnyObject]] else { return }
+                       
+                        eventsvals.forEach({ (key, value) in
+                            guard let valueDic = value as? [String:Any] else { return }
+                            
+                            var idval:Int?
+                            var title:String?
+                            var startingdate:String?
+                            var endDate:String?
+                            var displayImageUrl:String?
+                            var oneDayEvent:boolean_t?
+                            var description:String?
+                            var oranizedBy:String?
+                            
+                            for valueD in valueDic{
+                                
+                               
+                                if valueD.key == "id" {
+                                    print(valueD.value)
+                                }
+
+                                
+                                if valueD.key == "id" {
+                                    
+                                    idval = Int(  valueD.value as? String ?? "o") ??  0
+                                }
+                                if valueD.key == "title" {
+                                    
+                                    title = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "startingdate" {
+                                    
+                                    startingdate = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "endDate" {
+                                    
+                                    endDate = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "displayImageUrl" {
+                                    
+                                    displayImageUrl = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "oneDayEvent" {
+                                    let Oday = Int(  valueD.value as? String ?? "o") ??  0
+                                    oneDayEvent = boolean_t( Oday)
+                                }
+                                if valueD.key == "description" {
+                                    
+                                    description = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "oranizedBy" {
+                                    
+                                    oranizedBy = valueD.value as? String ?? ""
+                                }
+                               
+                                
+                            }
+                            let event=Event.init(id: idval ?? 0, title: title ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "")
+                            HomeViewController.EventList.append(event)
+                            self.eventsTblView.reloadData()
+                            
+                            
                         })
                     })
-//                    dictionary.forEach({ (key, value) in
-//
-//                        let post = value
-////                        post?.forEach({ (eventkey, eventVal) in
-////                            let eventObj = Event.init(
-////                                                    id:0,
-////                                                    title:eventVal["title"] as! String,
-////                                                    displayImageUrl:eventVal["displayImageUrl"] as! String,
-////                                                    startingdate:eventVal["startingdate"]as! String,
-////                                                    endDate:eventVal["endDate"]as! String,
-////                                                    oneDayEvent:1,
-////                                                    description:eventVal["description"]as! String,
-////                                                    oranizedBy:eventVal["oranizedBy"]as! String
-////                                                )
-////                        })
-//
-//                    })
-                  
-//                    let event = Event.init(
-//                        id:0,
-//                        title:dictionary["title"] as! String,
-//                        displayImageUrl:dictionary["displayImageUrl"] as! String,
-//                        startingdate:dictionary["startingdate"]as! String,
-//                        endDate:dictionary["endDate"]as! String,
-//                        oneDayEvent:1,
-//                        description:dictionary["description"]as! String,
-//                        oranizedBy:dictionary["oranizedBy"]as! String
-//                    )
                 }
             }
         }
     }
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return HomeViewController.EventList.count
     }
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        cell.textLabel?.text="sdsdsssd"
+        let event=HomeViewController.EventList[indexPath.row]
+        cell.textLabel?.text=event.title
+        cell.detailTextLabel?.text=event.startingdate;
+        if let imageUrl=event.displayImageUrl{
+            let url=NSURL(string: imageUrl)
+            let storageRef = Storage.storage().reference()
+            let imageRef = storageRef.child(String(event.displayImageUrl ?? "") )
+            
+            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+            imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                if let error = error {
+                    // Uh-oh, an error occurred!
+                } else {
+                    // Data for "images/island.jpg" is returned
+                    cell.imageView?.image  = UIImage(data: data!)
+                }
+            }
+            
+        }
         return cell
     }
 }
