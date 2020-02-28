@@ -8,43 +8,47 @@
 
 import UIKit
 import Firebase
+import Kingfisher
+
+class MianUiTableViewCell:UITableViewCell{
+    
+    @IBOutlet weak var EventImage: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var startDateLbl: UILabel! 
+    @IBOutlet weak var likeBtn: UIButton!
+    
+    @IBOutlet weak var commentBtn: UIButton!
+    
+    @IBAction func commengtBtnTapped(_ sender: Any) {
+        let origImage = UIImage(named: "verified")
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        commentBtn.setImage(tintedImage, for: .normal)
+        commentBtn.backgroundColor = .blue
+    }
+}
 
 class HomeViewController:UIViewController, UITableViewDelegate,UITableViewDataSource{
 
 
      let cellId="cellId"
     
-    static var EventList:[Event]=[]
+     var EventList:[Event]=[]
     
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var eventsTblView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchEvents()
+       
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func ajustCell(){
+        
+      
     }
-    */
- 
-//    @IBAction func loginBtnTapped(_ sender: Any) {
-//        let loginSB=UIStoryboard(name: "Login", bundle: Bundle.main)
-//
-//        guard let loginVC=loginSB.instantiateViewController(withIdentifier: "LoginController") as? LoginController else{
-//            return
-//        }
-//        present(loginVC, animated: true, completion: nil)
-//    }
-//
-    
     func fetchEvents(){
         
         Database.database().reference().child("Events").observe(DataEventType.value) { (snapshot) in
@@ -110,7 +114,7 @@ class HomeViewController:UIViewController, UITableViewDelegate,UITableViewDataSo
                                 
                             }
                             let event=Event.init(id: idval ?? 0, title: title ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "")
-                            HomeViewController.EventList.append(event)
+                            self.EventList.append(event)
                             self.eventsTblView.reloadData()
                             
                             
@@ -121,27 +125,38 @@ class HomeViewController:UIViewController, UITableViewDelegate,UITableViewDataSo
         }
     }
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return HomeViewController.EventList.count
+        return EventList.count
     }
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        let event=HomeViewController.EventList[indexPath.row]
-        cell.textLabel?.text=event.title
-        cell.detailTextLabel?.text=event.startingdate;
+        //let cell=UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath)
+            as! MianUiTableViewCell
+        let event=EventList[indexPath.row]
+        cell.titleLbl?.text=event.title
+        cell.startDateLbl?.text=event.startingdate;
+        cell.commentBtn.layer.cornerRadius = 60
+        cell.commentBtn.layer.borderColor=UIColor.black.cgColor
+        cell.commentBtn.layer.borderWidth=3.0
+        cell.commentBtn.backgroundColor = .white
+        cell.commentBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
+        cell.commentBtn.imageView?.layer.cornerRadius = cell.commentBtn.bounds.height/2.0
+        
+//        cell.commentBtn.layer.cornerRadius = 50
+//        cell.commentBtn.layer.borderColor=UIColor.black.cgColor
+//        cell.commentBtn.layer.borderWidth=3.0
+        
+       // cell.likeBtn.superview?.bringSubviewToFront(cell.EventImage)
+//        cell.textLabel?.text=event.title
+//        cell.detailTextLabel?.text=event.startingdate;
+        
         if let imageUrl=event.displayImageUrl{
-            let url=NSURL(string: imageUrl)
-            let storageRef = Storage.storage().reference()
-            let imageRef = storageRef.child(String(event.displayImageUrl ?? "") )
-            
-            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-            imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-                if let error = error {
-                    // Uh-oh, an error occurred!
-                } else {
-                    // Data for "images/island.jpg" is returned
-                    cell.imageView?.image  = UIImage(data: data!)
-                }
-            }
+            let url=URL(string: imageUrl)
+            let processor = RoundCornerImageProcessor(cornerRadius: 20)
+           // cell.imageView?.kf.setImage(with: url)
+            cell.EventImage?.kf.setImage(with: url)
+            cell.EventImage?.layer.cornerRadius=10;
+            cell.EventImage?.clipsToBounds=true;
+
             
         }
         return cell

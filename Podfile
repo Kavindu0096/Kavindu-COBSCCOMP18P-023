@@ -11,6 +11,9 @@ target 'Kavindu-COBSCCOMP18P-023' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
+  pod 'Alamofire', '~> 5.0'
+  pod 'Kingfisher', '~> 5.0'
+
 
   target 'Kavindu-COBSCCOMP18P-023Tests' do
     inherit! :search_paths
