@@ -39,10 +39,10 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
         let indexPath = self.eventsTblView.indexPath(for: cell)
         print(indexPath!.row)
         
-        let origImage = UIImage(named: "check2")
-        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
-        cell.commentBtn.setImage(tintedImage, for: .selected)
-        cell.commentBtn.backgroundColor = .blue
+        let origImage = UIImage(named: "correct")
+       // let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        cell.commentBtn.setImage(origImage, for: .normal)
+       // cell.commentBtn.backgroundColor = .blue//
         
      
     }
@@ -129,17 +129,14 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "MianUiTableViewCell", for: indexPath)
             as! MianUiTableViewCell
         cell.delegate = self
-        let event=EventList[indexPath.row]
-        cell.titleLbl?.text=event.title
-        cell.startDateLbl?.text=event.startingdate
-        
-        if let imageUrl=event.displayImageUrl{
-            let url=URL(string: imageUrl)
-            cell.EventImage?.kf.setImage(with: url)
-           
-
-            
-        }
+        cell.data = EventList[indexPath.row]
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        eventsTblView.deselectRow(at: indexPath, animated: true)
+        
+        guard let data = (tableView.cellForRow(at: indexPath) as? MianUiTableViewCell)?.data else { return }
+        
+        performSegue(withIdentifier: "UpdateDetail", sender:self)
     }
 }

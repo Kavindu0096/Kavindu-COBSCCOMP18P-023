@@ -29,6 +29,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
     
     let defaults = UserDefaults.standard
     static var eventArray:[Event]=[]
+    var event:Event?
     let common=Common()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
         // Do any additional setup after loading the view.
     }
     
-    
+    func seledtedDataL
     
     
     
