@@ -17,6 +17,7 @@ struct Event:Codable{
     var oneDayEvent:boolean_t?
     var description:String?
     var oranizedBy:String?
+    var going:boolean_t?
     
     init(id:Int,title:String,displayImageUrl:String,startingdate:String,endDate:String,oneDayEvent:boolean_t,description:String,oranizedBy:String) {
         self.id=id

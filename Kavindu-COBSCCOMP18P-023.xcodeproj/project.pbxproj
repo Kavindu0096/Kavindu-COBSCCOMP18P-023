@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5DF652D5B055098AC52A9404 /* Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B778B9D4D582A638879C97 /* Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework */; };
 		BA8488902406B21700A4E56C /* EventCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA84888F2406B21700A4E56C /* EventCustomCell.swift */; };
+		BA8488922409681C00A4E56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8488912409681B00A4E56C /* Assets.xcassets */; };
+		BA848894240A1F3A00A4E56C /* MianUiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA848893240A1F3900A4E56C /* MianUiTableViewCell.swift */; };
 		E0EADD5EEEBE0F12AF852E37 /* Pods_Kavindu_COBSCCOMP18P_023Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F03FB584F9CD70326C441E /* Pods_Kavindu_COBSCCOMP18P_023Tests.framework */; };
 		F4B1955023E9D22600D75DB9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1954F23E9D22600D75DB9 /* Login.storyboard */; };
 		F4B1955A23E9D83700D75DB9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1955923E9D83700D75DB9 /* LoginController.swift */; };
@@ -22,7 +24,6 @@
 		F4C7481523E96ED200345358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7481423E96ED200345358 /* AppDelegate.swift */; };
 		F4C7481723E96ED200345358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7481623E96ED200345358 /* ViewController.swift */; };
 		F4C7481A23E96ED200345358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C7481823E96ED200345358 /* Main.storyboard */; };
-		F4C7481C23E96ED200345358 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C7481B23E96ED200345358 /* Assets.xcassets */; };
 		F4C7481F23E96ED200345358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C7481D23E96ED200345358 /* LaunchScreen.storyboard */; };
 		F4C7482A23E96ED300345358 /* Kavindu_COBSCCOMP18P_023Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7482923E96ED300345358 /* Kavindu_COBSCCOMP18P_023Tests.swift */; };
 		F4C7483523E96ED300345358 /* Kavindu_COBSCCOMP18P_023UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7483423E96ED300345358 /* Kavindu_COBSCCOMP18P_023UITests.swift */; };
@@ -57,6 +58,8 @@
 		91B778B9D4D582A638879C97 /* Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97ED74B95C74DD0E6AE03201 /* Pods_Kavindu_COBSCCOMP18P_023.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kavindu_COBSCCOMP18P_023.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA84888F2406B21700A4E56C /* EventCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCustomCell.swift; sourceTree = "<group>"; };
+		BA8488912409681B00A4E56C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA848893240A1F3900A4E56C /* MianUiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MianUiTableViewCell.swift; sourceTree = "<group>"; };
 		C6BA4198ED06D4727CB72E7A /* Pods-Kavindu-COBSCCOMP18P-023Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023Tests.release.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023Tests/Pods-Kavindu-COBSCCOMP18P-023Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E0E8D65F38BBE880CAB496CB /* Pods-Kavindu-COBSCCOMP18P-023.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023.debug.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023/Pods-Kavindu-COBSCCOMP18P-023.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B1954F23E9D22600D75DB9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -72,7 +75,6 @@
 		F4C7481423E96ED200345358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C7481623E96ED200345358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4C7481923E96ED200345358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F4C7481B23E96ED200345358 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4C7481E23E96ED200345358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4C7482023E96ED200345358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4C7482523E96ED300345358 /* Kavindu-COBSCCOMP18P-023Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kavindu-COBSCCOMP18P-023Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				BA84888F2406B21700A4E56C /* EventCustomCell.swift */,
+				BA848893240A1F3900A4E56C /* MianUiTableViewCell.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -228,7 +231,7 @@
 				F4B1951B23E9CF3200D75DB9 /* ViewControllers */,
 				F4B1951A23E9CF0600D75DB9 /* StoryBords */,
 				F4C7481423E96ED200345358 /* AppDelegate.swift */,
-				F4C7481B23E96ED200345358 /* Assets.xcassets */,
+				BA8488912409681B00A4E56C /* Assets.xcassets */,
 				F4C7481D23E96ED200345358 /* LaunchScreen.storyboard */,
 				F4C7482023E96ED200345358 /* Info.plist */,
 			);
@@ -382,9 +385,9 @@
 			files = (
 				F4C7481F23E96ED200345358 /* LaunchScreen.storyboard in Resources */,
 				F4B1955023E9D22600D75DB9 /* Login.storyboard in Resources */,
-				F4C7481C23E96ED200345358 /* Assets.xcassets in Resources */,
 				F4C7481A23E96ED200345358 /* Main.storyboard in Resources */,
 				F4B1955C23E9E0B200D75DB9 /* GoogleService-Info.plist in Resources */,
+				BA8488922409681C00A4E56C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +529,7 @@
 				F4F686BD23F0087400A58307 /* Alert.swift in Sources */,
 				F4B1955E23E9EE2100D75DB9 /* SignUpController.swift in Sources */,
 				F4B1956323EBB4D800D75DB9 /* HomeViewController.swift in Sources */,
+				BA848894240A1F3A00A4E56C /* MianUiTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

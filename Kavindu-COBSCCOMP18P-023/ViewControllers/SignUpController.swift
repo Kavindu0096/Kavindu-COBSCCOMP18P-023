@@ -17,9 +17,10 @@ class SignUpController: UIViewController {
     @IBOutlet weak var rePasswordTxt: UITextField!
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var dismissBtn: UIButton!
+    @IBOutlet weak var headerLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        headerLbl.text="Let's\nget started"
         // Do any additional setup after loading the view.
     }
     

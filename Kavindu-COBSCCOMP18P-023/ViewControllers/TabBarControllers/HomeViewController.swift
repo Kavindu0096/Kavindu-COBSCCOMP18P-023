@@ -10,24 +10,8 @@ import UIKit
 import Firebase
 import Kingfisher
 
-class MianUiTableViewCell:UITableViewCell{
-    
-    @IBOutlet weak var EventImage: UIImageView!
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var startDateLbl: UILabel! 
-    @IBOutlet weak var likeBtn: UIButton!
-    
-    @IBOutlet weak var commentBtn: UIButton!
-    
-    @IBAction func commengtBtnTapped(_ sender: Any) {
-        let origImage = UIImage(named: "verified")
-        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
-        commentBtn.setImage(tintedImage, for: .normal)
-        commentBtn.backgroundColor = .blue
-    }
-}
 
-class HomeViewController:UIViewController, UITableViewDelegate,UITableViewDataSource{
+class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableViewDelegate,UITableViewDataSource{
 
 
      let cellId="cellId"
@@ -48,6 +32,19 @@ class HomeViewController:UIViewController, UITableViewDelegate,UITableViewDataSo
     func ajustCell(){
         
       
+    }
+    
+    func commengtBtnTapped(cell: MianUiTableViewCell) {
+        
+        let indexPath = self.eventsTblView.indexPath(for: cell)
+        print(indexPath!.row)
+        
+        let origImage = UIImage(named: "check2")
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        cell.commentBtn.setImage(tintedImage, for: .selected)
+        cell.commentBtn.backgroundColor = .blue
+        
+     
     }
     func fetchEvents(){
         
@@ -128,34 +125,18 @@ class HomeViewController:UIViewController, UITableViewDelegate,UITableViewDataSo
         return EventList.count
     }
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell=UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath)
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MianUiTableViewCell", for: indexPath)
             as! MianUiTableViewCell
+        cell.delegate = self
         let event=EventList[indexPath.row]
         cell.titleLbl?.text=event.title
-        cell.startDateLbl?.text=event.startingdate;
-        cell.commentBtn.layer.cornerRadius = 60
-        cell.commentBtn.layer.borderColor=UIColor.black.cgColor
-        cell.commentBtn.layer.borderWidth=3.0
-        cell.commentBtn.backgroundColor = .white
-        cell.commentBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
-        cell.commentBtn.imageView?.layer.cornerRadius = cell.commentBtn.bounds.height/2.0
-        
-//        cell.commentBtn.layer.cornerRadius = 50
-//        cell.commentBtn.layer.borderColor=UIColor.black.cgColor
-//        cell.commentBtn.layer.borderWidth=3.0
-        
-       // cell.likeBtn.superview?.bringSubviewToFront(cell.EventImage)
-//        cell.textLabel?.text=event.title
-//        cell.detailTextLabel?.text=event.startingdate;
+        cell.startDateLbl?.text=event.startingdate
         
         if let imageUrl=event.displayImageUrl{
             let url=URL(string: imageUrl)
-            let processor = RoundCornerImageProcessor(cornerRadius: 20)
-           // cell.imageView?.kf.setImage(with: url)
             cell.EventImage?.kf.setImage(with: url)
-            cell.EventImage?.layer.cornerRadius=10;
-            cell.EventImage?.clipsToBounds=true;
+           
 
             
         }
