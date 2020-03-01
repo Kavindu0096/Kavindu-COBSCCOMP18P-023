@@ -11,7 +11,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var eDateTxt: UILabel!
     @IBOutlet weak var locationTxt: UILabel!
     
-    
+   
     
     var event:Event?
     override func viewDidLoad() {
@@ -19,6 +19,8 @@ class EventDetailViewController: UIViewController {
 
         
         if(event != nil){
+           
+            
             seledtedDataLoad(event:event!)
         }
         

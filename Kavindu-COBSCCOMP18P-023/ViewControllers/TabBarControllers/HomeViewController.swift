@@ -59,7 +59,7 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
                 if let dictionary=snapshot.value as? [String:AnyObject]{
                     dictionary.values.forEach({ (vals) in
                         guard let eventsvals = vals as? [String:[String:AnyObject]] else { return }
-                       
+                        
                         eventsvals.forEach({ (key, value) in
                             guard let valueDic = value as? [String:Any] else { return }
                             
@@ -75,6 +75,9 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
                             var description:String?
                             var oranizedBy:String?
                             
+                            var userKey:String?
+                            var timeStampKey:String?
+                            timeStampKey=key
                             for valueD in valueDic{
                                 
                                
@@ -130,7 +133,7 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
                                
                                 
                             }
-                            let event=Event.init(id: idval ?? 0, title: title ?? "",location:location ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "",startTime:startTime ?? "",endTime:endTime ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "")
+                            let event=Event.init(id: idval ?? 0, title: title ?? "",location:location ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "",startTime:startTime ?? "",endTime:endTime ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "" ,userKey: userKey ?? "", timeStampKey: timeStampKey ?? "")
                             self.EventList.append(event)
                             self.eventsTblView.reloadData()
                             

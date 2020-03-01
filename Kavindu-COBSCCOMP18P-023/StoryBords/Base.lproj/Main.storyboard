@@ -371,7 +371,7 @@
                     <navigationItem key="navigationItem" id="nkE-pd-FfI"/>
                     <connections>
                         <outlet property="eventsTblView" destination="T9d-1p-7yN" id="myS-RX-0xY"/>
-                        <segue destination="yuA-SE-hEF" kind="show" id="uua-IA-GgM"/>
+                        <segue destination="yuA-SE-hEF" kind="show" identifier="UpdateDetail" id="M18-ys-91h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xp-NL-kOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -572,7 +572,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="6tu-BK-r8Y"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button"/>
+                                                                <state key="normal" title="Publish"/>
                                                                 <connections>
                                                                     <action selector="publishBtnTapped:" destination="yuA-SE-hEF" eventType="touchUpInside" id="5fG-XB-kRi"/>
                                                                 </connections>
@@ -738,6 +738,6 @@
         <image name="verified1" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uua-IA-GgM"/>
+        <segue reference="M18-ys-91h"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -22,7 +22,9 @@ struct Event:Codable{
     var oranizedBy:String?
     var going:boolean_t?
     
-    init(id:Int,title:String,location:String,displayImageUrl:String,startingdate:String,startTime:String?,endTime:String?,endDate:String,oneDayEvent:boolean_t,description:String,oranizedBy:String) {
+    var userKey:String?
+    var timeStampKey:String?
+    init(id:Int,title:String,location:String,displayImageUrl:String,startingdate:String,startTime:String?,endTime:String?,endDate:String,oneDayEvent:boolean_t,description:String,oranizedBy:String, userKey:String,timeStampKey:String) {
         self.id=id
         self.title=title
         self.displayImageUrl=displayImageUrl
@@ -33,6 +35,8 @@ struct Event:Codable{
         self.oneDayEvent=oneDayEvent
         self.description=description
         self.oranizedBy=oranizedBy
+        self.userKey=userKey
+        self.timeStampKey=timeStampKey
     }
     
     var asDictinary:[String:Any]{
@@ -48,6 +52,8 @@ struct Event:Codable{
             "oneDayEvent":oneDayEvent  ?? "",
             "description":description  ?? "",
             "oranizedBy":oranizedBy  ?? "",
+            "userKey":userKey ?? "",
+            "timeStampKey":timeStampKey ?? "",
         ]
     }
 }

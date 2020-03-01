@@ -62,7 +62,11 @@ class AddEventViewController: UIViewController,UITableViewDelegate,UITableViewDa
                             var oneDayEvent:boolean_t?
                             var description:String?
                             var oranizedBy:String?
-                            
+                        
+                        var userKey:String?
+                        var timeStampkey:String?
+                        userKey=""
+                        timeStampkey=""
                             for valueD in eventsvals{
                                 
                                 
@@ -118,7 +122,7 @@ class AddEventViewController: UIViewController,UITableViewDelegate,UITableViewDa
                                 
                                 
                             }
-                            let event=Event.init(id: idval ?? 0, title: title ?? "",location:location ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "",startTime:startTime ?? "",endTime:endTime ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "")
+                    let event=Event.init(id: idval ?? 0, title: title ?? "",location:location ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "",startTime:startTime ?? "",endTime:endTime ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "" , userKey:userKey ?? "",timeStampKey: timeStampkey ?? "" )
                             self.EventList.append(event)
                     
                         })
@@ -152,7 +156,7 @@ class AddEventViewController: UIViewController,UITableViewDelegate,UITableViewDa
             
             guard  let data1 = ( eventsTblView.cellForRow(at: indexPath) as? UserEventUITableViewCell)?.data else { return }
             
-            if let destination = segue.destination as? EventDetailViewController{
+            if let destination = segue.destination as? AddEventDetailViewController{
                 destination.event=data1
             }
             eventsTblView.deselectRow(at: indexPath

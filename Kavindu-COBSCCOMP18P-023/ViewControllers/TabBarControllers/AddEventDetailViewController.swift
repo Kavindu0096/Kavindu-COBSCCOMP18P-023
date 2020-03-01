@@ -32,14 +32,46 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
     
     let defaults = UserDefaults.standard
     static var eventArray:[Event]=[]
-  
+    var event:Event?
+    static var docType="add"
+    static var timeStampKey=""
     let common=Common()
     override func viewDidLoad() {
         super.viewDidLoad()
         initEvent()
+         publishBtn.setTitle("Publish",for: .normal)
+        if(event != nil){
+            publishBtn.setTitle("Update",for: .normal)
+            AddEventDetailViewController.docType="update"
+           setData(event:event!)
+        }
     }
     
-    
+    func setData(event:Event){
+        AddEventDetailViewController.timeStampKey=event.timeStampKey ?? ""
+        titleTxt.text = event.title
+        locationTxt.text = event.location
+        descriptionTxt.text = event.description
+        oraganizedByTxt.text = event.oranizedBy
+        displayImg.kf.setImage(with: URL(string: event.displayImageUrl ?? ""))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat =  "yyyy-MM-dd HH:mm:ss Z"
+        
+        guard let sdateT = dateFormatter.date(from: event.startingdate!) else {return}
+        guard let edateT = dateFormatter.date(from: event.endDate!) else {return}
+        
+        startDatePicker.date=sdateT
+        endDatePicker.date=edateT
+        
+       
+        dateFormatter.dateFormat =  "HH.mm"
+        guard let sdate = dateFormatter.date(from: event.startTime ?? "9.00") else {return}
+        guard let edate = dateFormatter.date(from: event.endTime ?? "18.00") else {return}
+        startTimePicker.date = sdate
+        endDatePicker.date = edate
+        
+      
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         
@@ -87,6 +119,7 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
         
         
         if(validateData()){
+            
             let maxId=(AddEventDetailViewController.eventArray.map({$0.id}).max() ?? 0)+1
             let storageRef = Storage.storage().reference()
             let imageName = String(maxId.description)+","+".png";
@@ -111,7 +144,14 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
                         print(error ?? "")
                         return
                     }
-                    self.addEvent(imgUrl: downloadURL.description)
+                    if(AddEventDetailViewController.docType=="update"){
+                        
+                         self.addEvent(imgUrl: downloadURL.description)
+                    }
+                    else{
+                        
+                    }
+                   
                 }
             }
         }
@@ -157,7 +197,9 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
             endDate:String(endDate.description) ,
             oneDayEvent:oneDayEventSwitch.isOn ? 1 :  0,
             description:descriptionTxt.text ?? "",
-            oranizedBy:oraganizedByTxt.text ?? ""
+            oranizedBy:oraganizedByTxt.text ?? "",
+            userKey: "",
+             timeStampKey: ""
         )
          let userUid=common.getUserUid()
         if userUid != "" {
@@ -170,6 +212,68 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
                     self.present(alert, animated: true, completion: nil)
                 } else {
                    
+                    let alert = UIAlertController(title:"Record Saved", message: "Record Saved Successfully", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                    self.initEvent()
+                }
+            }
+        }
+        
+        AddEventDetailViewController.eventArray.append(event)
+        let er=try? PropertyListEncoder().encode(AddEventDetailViewController.eventArray)
+        
+        defaults.set(er ,forKey: "Events")
+        
+    }
+    
+    func updateEvent(imgUrl:String){
+        
+        let scomponents = Calendar.current.dateComponents([.hour, .minute], from: startTimePicker.date
+        )
+        
+        let shour = scomponents.hour!
+        let sminute = scomponents.minute ?? 00
+        let sTime=String(shour)+"."+String(sminute)
+        
+        let ecomponents = Calendar.current.dateComponents([.hour, .minute], from: endDatePicker.date
+        )
+        
+        let ehour = ecomponents.hour!
+        let eminute = ecomponents.minute ?? 30
+        let eTime=String(ehour)+"."+String(eminute)
+        let now = Date()
+        let maxId=AddEventDetailViewController.eventArray.map({$0.id}).max() ?? 0
+        //  guard let startDate = startDatePicker.date else{ return Date.}
+        let endDate=oneDayEventSwitch.isOn ? startDatePicker.date : endDatePicker.date;
+        let event = Event.init(
+            id: Int(maxId)+1,
+            title:titleTxt.text!,
+            location: locationTxt.text!,
+            displayImageUrl:imgUrl ,
+            //            startingdate:dateFormatter.date(from:startDateTxt.text!)!,
+            //            endDate:dateFormatter.date(from:endDateTxt.text!)!,
+            startingdate:String(startDatePicker?.date.description ?? now.description) ,
+            startTime:sTime,
+            endTime:eTime,
+            endDate:String(endDate.description) ,
+            oneDayEvent:oneDayEventSwitch.isOn ? 1 :  0,
+            description:descriptionTxt.text ?? "",
+            oranizedBy:oraganizedByTxt.text ?? "",
+            userKey: "",
+            timeStampKey: ""
+        )
+        let userUid=common.getUserUid()
+        if userUid != "" {
+            
+            Database.database().reference().child("Events").child(userUid).child(AddEventDetailViewController.timeStampKey).child(String(now.description)).setValue(event.asDictinary) {
+                (error:Error?, ref:DatabaseReference) in
+                if error != nil {
+                    let alert = UIAlertController(title:"Error Occurd", message: "Error Occurd when saving record", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                } else {
+                    
                     let alert = UIAlertController(title:"Record Saved", message: "Record Saved Successfully", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
                     self.present(alert, animated: true, completion: nil)
