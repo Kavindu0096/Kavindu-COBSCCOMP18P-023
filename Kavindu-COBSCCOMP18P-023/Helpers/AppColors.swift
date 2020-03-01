@@ -9,6 +9,9 @@
 import UIKit
 
 struct AppColors {
-    static var blue = #colorLiteral(red: 0.09019607843, green: 0, blue: 0.3098039216, alpha: 1)
+    static var lightBlue = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+    static var black = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    static var brown = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
 }
+
 

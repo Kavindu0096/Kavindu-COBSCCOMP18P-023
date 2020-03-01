@@ -9,12 +9,18 @@
 import UIKit
 import Firebase
 
-class AddEventViewController: UIViewController {
+class AddEventViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+   
 
+    @IBOutlet weak var eventsTblView: UITableView!
     let common=Common()
+    var EventList:[Event]=[]
+    var selectedEvent:Event!
+    var event:Event?
     override func viewDidLoad() {
        
         validateLogin()
+        fetchEvents()
        
     }
 //    override func viewDidAppear(_ animated: Bool) {
@@ -35,14 +41,135 @@ class AddEventViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func fetchEvents(){
+        guard let uId=Auth.auth().currentUser?.uid else{return}
+        Database.database().reference().child("Events").child(uId).observe(DataEventType.value) { (snapshot) in
+            if snapshot.childrenCount>0{
+                
+                if let dictionary=snapshot.value as? [String:AnyObject]{
+                    dictionary.values.forEach({ (vals) in
+                        guard let eventsvals = vals as? [String:AnyObject] else { return }
+                        
+                            
+                            var idval:Int?
+                            var title:String?
+                            var location:String?
+                            var startingdate:String?
+                            var startTime:String?
+                            var endTime:String?
+                            var endDate:String?
+                            var displayImageUrl:String?
+                            var oneDayEvent:boolean_t?
+                            var description:String?
+                            var oranizedBy:String?
+                            
+                            for valueD in eventsvals{
+                                
+                                
+                                if valueD.key == "id" {
+                                    print(valueD.value)
+                                }
+                                
+                                
+                                if valueD.key == "id" {
+                                    
+                                    idval = Int(  valueD.value as? String ?? "o") ??  0
+                                }
+                                if valueD.key == "title" {
+                                    
+                                    title = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "location" {
+                                    
+                                    location = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "startingdate" {
+                                    
+                                    startingdate = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "startTime" {
+                                    
+                                    startTime = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "endTime" {
+                                    
+                                    endTime = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "endDate" {
+                                    
+                                    endDate = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "displayImageUrl" {
+                                    
+                                    displayImageUrl = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "oneDayEvent" {
+                                    let Oday = Int(  valueD.value as? String ?? "o") ??  0
+                                    oneDayEvent = boolean_t( Oday)
+                                }
+                                if valueD.key == "description" {
+                                    
+                                    description = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "oranizedBy" {
+                                    
+                                    oranizedBy = valueD.value as? String ?? ""
+                                }
+                                
+                                
+                            }
+                            let event=Event.init(id: idval ?? 0, title: title ?? "",location:location ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "",startTime:startTime ?? "",endTime:endTime ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "")
+                            self.EventList.append(event)
+                    
+                        })
+                }
+                
+                DispatchQueue.main.async {
+                    self.eventsTblView.reloadData()
+                }
+            }
+        }
     }
-    */
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return EventList.count
+    }
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserEventUITableViewCell", for: indexPath)
+            as! UserEventUITableViewCell
+       
+        cell.data = EventList[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "UpdateDetail", sender:self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier=="UpdateDetail"){
+            guard let  indexPath=eventsTblView?.indexPathForSelectedRow else{return}
+            
+            guard  let data1 = ( eventsTblView.cellForRow(at: indexPath) as? UserEventUITableViewCell)?.data else { return }
+            
+            if let destination = segue.destination as? EventDetailViewController{
+                destination.event=data1
+            }
+            eventsTblView.deselectRow(at: indexPath
+                , animated: true)
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            
+        }
+    }
 
 }

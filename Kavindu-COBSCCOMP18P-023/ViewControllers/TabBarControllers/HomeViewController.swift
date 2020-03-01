@@ -14,10 +14,10 @@ import Kingfisher
 class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableViewDelegate,UITableViewDataSource{
 
 
-     let cellId="cellId"
-    
-     var EventList:[Event]=[]
-    
+    let cellId="cellId"
+    var EventList:[Event]=[]
+    var selectedEvent:Event!
+      var event:Event?
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var eventsTblView: UITableView!
     
@@ -29,20 +29,25 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
         // Do any additional setup after loading the view.
     }
     
-    func ajustCell(){
-        
-      
-    }
+
     
     func commengtBtnTapped(cell: MianUiTableViewCell) {
         
         let indexPath = self.eventsTblView.indexPath(for: cell)
-        print(indexPath!.row)
-        
-        let origImage = UIImage(named: "correct")
-       // let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
-        cell.commentBtn.setImage(origImage, for: .normal)
-       // cell.commentBtn.backgroundColor = .blue//
+
+        if(EventList[(indexPath?.row)!].going==0 || EventList[(indexPath?.row)!].going==nil){
+            let origImage = UIImage(named: "correct")
+            cell.commentBtn.setImage(origImage, for: .normal)
+            EventList[(indexPath?.row)!].going=1
+            cell.goingLbl.textColor=AppColors.lightBlue
+        }
+        else{
+            let origImage = UIImage(named: "verified1")
+            cell.commentBtn.setImage(origImage, for: .normal)
+            EventList[(indexPath?.row)!].going=0
+            cell.goingLbl.textColor=AppColors.black
+        }
+       
         
      
     }
@@ -60,7 +65,10 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
                             
                             var idval:Int?
                             var title:String?
+                            var location:String?
                             var startingdate:String?
+                            var startTime:String?
+                            var endTime:String?
                             var endDate:String?
                             var displayImageUrl:String?
                             var oneDayEvent:boolean_t?
@@ -83,9 +91,21 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
                                     
                                     title = valueD.value as? String ?? ""
                                 }
+                                if valueD.key == "location" {
+                                    
+                                    location = valueD.value as? String ?? ""
+                                }
                                 if valueD.key == "startingdate" {
                                     
                                     startingdate = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "startTime" {
+                                    
+                                    startTime = valueD.value as? String ?? ""
+                                }
+                                if valueD.key == "endTime" {
+                                    
+                                    endTime = valueD.value as? String ?? ""
                                 }
                                 if valueD.key == "endDate" {
                                     
@@ -110,7 +130,7 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
                                
                                 
                             }
-                            let event=Event.init(id: idval ?? 0, title: title ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "")
+                            let event=Event.init(id: idval ?? 0, title: title ?? "",location:location ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "",startTime:startTime ?? "",endTime:endTime ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "")
                             self.EventList.append(event)
                             self.eventsTblView.reloadData()
                             
@@ -132,11 +152,23 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
         cell.data = EventList[indexPath.row]
         return cell
     }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        eventsTblView.deselectRow(at: indexPath, animated: true)
-        
-        guard let data = (tableView.cellForRow(at: indexPath) as? MianUiTableViewCell)?.data else { return }
-        
         performSegue(withIdentifier: "UpdateDetail", sender:self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if(segue.identifier=="UpdateDetail"){
+            guard let  indexPath=eventsTblView?.indexPathForSelectedRow else{return}
+            
+             guard  let data1 = ( eventsTblView.cellForRow(at: indexPath) as? MianUiTableViewCell)?.data else { return }
+            
+           if let destination = segue.destination as? EventDetailViewController{
+                destination.event=data1
+            }
+            eventsTblView.deselectRow(at: indexPath
+                , animated: true)
+        }
+        
     }
 }

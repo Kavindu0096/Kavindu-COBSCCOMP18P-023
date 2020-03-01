@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5DF652D5B055098AC52A9404 /* Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B778B9D4D582A638879C97 /* Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework */; };
+		BA626F62240C18FE00A2C0F0 /* UserEventUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA626F61240C18FE00A2C0F0 /* UserEventUITableViewCell.swift */; };
 		BA8488902406B21700A4E56C /* EventCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA84888F2406B21700A4E56C /* EventCustomCell.swift */; };
 		BA8488922409681C00A4E56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8488912409681B00A4E56C /* Assets.xcassets */; };
 		BA848894240A1F3A00A4E56C /* MianUiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA848893240A1F3900A4E56C /* MianUiTableViewCell.swift */; };
 		BA848896240ACC0000A4E56C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA848895240ACC0000A4E56C /* AppColors.swift */; };
+		BA848898240B9BEA00A4E56C /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA848897240B9BE900A4E56C /* EventDetailViewController.swift */; };
 		E0EADD5EEEBE0F12AF852E37 /* Pods_Kavindu_COBSCCOMP18P_023Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F03FB584F9CD70326C441E /* Pods_Kavindu_COBSCCOMP18P_023Tests.framework */; };
 		F4B1955023E9D22600D75DB9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B1954F23E9D22600D75DB9 /* Login.storyboard */; };
 		F4B1955A23E9D83700D75DB9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B1955923E9D83700D75DB9 /* LoginController.swift */; };
@@ -58,10 +60,12 @@
 		73F03FB584F9CD70326C441E /* Pods_Kavindu_COBSCCOMP18P_023Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kavindu_COBSCCOMP18P_023Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B778B9D4D582A638879C97 /* Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kavindu_COBSCCOMP18P_023_Kavindu_COBSCCOMP18P_023UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97ED74B95C74DD0E6AE03201 /* Pods_Kavindu_COBSCCOMP18P_023.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kavindu_COBSCCOMP18P_023.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA626F61240C18FE00A2C0F0 /* UserEventUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventUITableViewCell.swift; sourceTree = "<group>"; };
 		BA84888F2406B21700A4E56C /* EventCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCustomCell.swift; sourceTree = "<group>"; };
 		BA8488912409681B00A4E56C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA848893240A1F3900A4E56C /* MianUiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MianUiTableViewCell.swift; sourceTree = "<group>"; };
 		BA848895240ACC0000A4E56C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		BA848897240B9BE900A4E56C /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		C6BA4198ED06D4727CB72E7A /* Pods-Kavindu-COBSCCOMP18P-023Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023Tests.release.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023Tests/Pods-Kavindu-COBSCCOMP18P-023Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E0E8D65F38BBE880CAB496CB /* Pods-Kavindu-COBSCCOMP18P-023.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kavindu-COBSCCOMP18P-023.debug.xcconfig"; path = "Target Support Files/Pods-Kavindu-COBSCCOMP18P-023/Pods-Kavindu-COBSCCOMP18P-023.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B1954F23E9D22600D75DB9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			children = (
 				BA84888F2406B21700A4E56C /* EventCustomCell.swift */,
 				BA848893240A1F3900A4E56C /* MianUiTableViewCell.swift */,
+				BA626F61240C18FE00A2C0F0 /* UserEventUITableViewCell.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				F4B1956423EBB4EB00D75DB9 /* ProfileViewController.swift */,
 				F4B1956623EBB4F900D75DB9 /* AddEventViewController.swift */,
 				F4B1956F23EC09DC00D75DB9 /* AddEventDetailViewController.swift */,
+				BA848897240B9BE900A4E56C /* EventDetailViewController.swift */,
 			);
 			path = TabBarControllers;
 			sourceTree = "<group>";
@@ -521,6 +527,7 @@
 				F4C7481723E96ED200345358 /* ViewController.swift in Sources */,
 				F4B1956723EBB4F900D75DB9 /* AddEventViewController.swift in Sources */,
 				F4F686C123F0348100A58307 /* Common.swift in Sources */,
+				BA626F62240C18FE00A2C0F0 /* UserEventUITableViewCell.swift in Sources */,
 				F4B1955A23E9D83700D75DB9 /* LoginController.swift in Sources */,
 				F4B1957023EC09DC00D75DB9 /* AddEventDetailViewController.swift in Sources */,
 				F4F686BA23EEB28D00A58307 /* Event.swift in Sources */,
@@ -533,6 +540,7 @@
 				F4B1955E23E9EE2100D75DB9 /* SignUpController.swift in Sources */,
 				BA848896240ACC0000A4E56C /* AppColors.swift in Sources */,
 				F4B1956323EBB4D800D75DB9 /* HomeViewController.swift in Sources */,
+				BA848898240B9BEA00A4E56C /* EventDetailViewController.swift in Sources */,
 				BA848894240A1F3A00A4E56C /* MianUiTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

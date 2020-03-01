@@ -1,27 +1,26 @@
 //
-//  MianUiTableViewCell.swift
+//  UserEventsUiTableViewCell.swift
 //  Kavindu-COBSCCOMP18P-023
 //
-//  Created by kevn shayn on 2/29/20.
+//  Created by kevn shayn on 3/1/20.
 //  Copyright © 2020 Kavindu Nimsara. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 
-protocol MianUiTableViewCellDelegate: class {
-    func commengtBtnTapped(cell: MianUiTableViewCell)
-}
-class MianUiTableViewCell:UITableViewCell{
+
+
+class UserEventsUiTableViewCell:UITableViewCell{
     
     @IBOutlet weak var EventImage: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var startDateLbl: UILabel!
-    @IBOutlet weak var likeBtn: UIButton!
-    @IBOutlet weak var goingLbl: UILabel!
+
     
     @IBOutlet weak var commentBtn: UIButton!
-    weak var delegate: MianUiTableViewCellDelegate?
+  
     
     @IBOutlet weak var goingStackView: UIStackView!
     
@@ -31,13 +30,9 @@ class MianUiTableViewCell:UITableViewCell{
         }
     }
     
-    @IBAction func commengtBtnTapped(_ sender: Any) {
-        
-        delegate?.commengtBtnTapped(cell: self)
-    }
     
     private func updateUI(with data:Event) {
-
+        
         guard let startingDate=data.startingdate else {return}
         let dateFormatter = DateFormatter()
         //dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -54,9 +49,9 @@ class MianUiTableViewCell:UITableViewCell{
         
         let firstString = NSMutableAttributedString(string: nameOfMonth, attributes: firstAttributes)
         let secondString = NSAttributedString(string: "\n"+dayOfMonth, attributes: secondAttributes)
-      
+        
         firstString.append(secondString)
-    
+        
         titleLbl.text = data.title
         startDateLbl.attributedText = firstString
         
@@ -70,13 +65,10 @@ class MianUiTableViewCell:UITableViewCell{
         
         EventImage?.layer.cornerRadius=10;
         EventImage?.clipsToBounds=true;
-        commentBtn.layer.borderColor=UIColor.black.cgColor
-        commentBtn.layer.borderWidth=0.0
-        
-        commentBtn.backgroundColor = .white
+
         let SWFrame=goingStackView.frame
         guard let suView=superview else{return}
         
-     
+        
     }
 }
