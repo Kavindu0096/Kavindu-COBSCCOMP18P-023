@@ -171,7 +171,12 @@ class AddEventViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
+           // tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            //tableView.reloadData()
+            EventList.remove(at: indexPath.row)
+           // self.catNames.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.reloadData()
             
         }
     }

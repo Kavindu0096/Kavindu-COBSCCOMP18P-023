@@ -146,10 +146,10 @@ class AddEventDetailViewController: UIViewController,UIImagePickerControllerDele
                     }
                     if(AddEventDetailViewController.docType=="update"){
                         
-                         self.addEvent(imgUrl: downloadURL.description)
+                        
                     }
                     else{
-                        
+                         self.addEvent(imgUrl: downloadURL.description)
                     }
                    
                 }

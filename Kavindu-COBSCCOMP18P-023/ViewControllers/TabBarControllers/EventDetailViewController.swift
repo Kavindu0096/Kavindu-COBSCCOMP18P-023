@@ -64,21 +64,8 @@ class EventDetailViewController: UIViewController {
         let EDAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: AppColors.black, .font: UIFont.systemFont(ofSize: 18)]
         let secondString = NSMutableAttributedString(string: nameOfDay+","+nameOfMonth+" "+dayOfMonth, attributes: EDAttributes)
         eDateTxt.attributedText=secondString
-//        titleTxt.text = event.title
-//        if(event.oneDayEvent==1){oneDayEventSwitch.isOn=true}else{oneDayEventSwitch.isOn=false}
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat =  "HH:mm"
-//
-//        if let sdate = dateFormatter.date(from: event.startingdate!) {
-//            startDatePicker.date = sdate
-//        }
-//        if let edate = dateFormatter.date(from: event.endDate!) {
-//            endDatePicker.date = edate
-//        }
-//        descriptionTxt.text=event.description
-//        let url=URL(string: event.displayImageUrl!)
-//        displayImg.kf.setImage(with:url)
-//
+        locationTxt.text=event.location ?? "NIBM"
+
         
         
     }

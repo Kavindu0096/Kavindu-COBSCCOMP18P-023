@@ -135,10 +135,13 @@ class HomeViewController:UIViewController,MianUiTableViewCellDelegate, UITableVi
                             }
                             let event=Event.init(id: idval ?? 0, title: title ?? "",location:location ?? "", displayImageUrl: displayImageUrl ?? "", startingdate: startingdate ?? "",startTime:startTime ?? "",endTime:endTime ?? "", endDate: endDate ?? "", oneDayEvent: oneDayEvent ?? 0, description: description ?? "", oranizedBy: oranizedBy ?? "" ,userKey: userKey ?? "", timeStampKey: timeStampKey ?? "")
                             self.EventList.append(event)
-                            self.eventsTblView.reloadData()
+                           
                             
                             
                         })
+                        DispatchQueue.main.async {
+                            self.eventsTblView.reloadData()
+                        }
                     })
                 }
             }

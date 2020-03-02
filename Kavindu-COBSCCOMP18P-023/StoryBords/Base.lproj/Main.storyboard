@@ -90,6 +90,9 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="asP-ov-XEe" secondAttribute="bottom" constant="20" id="pRa-BS-efl"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -218,7 +221,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="7Dc-9J-X5b"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcS-8N-dEi">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcS-8N-dEi">
                                                         <rect key="frame" x="36" y="0.0" width="358" height="64"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -661,7 +664,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teN-bY-z75">
-                                <rect key="frame" x="328" y="76" width="71" height="33"/>
+                                <rect key="frame" x="323" y="84" width="71" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" red="0.90297826776649748" green="0.033797612200023697" blue="0.0" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
@@ -673,9 +676,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="teN-bY-z75" firstAttribute="top" secondItem="v4B-Zu-DXt" secondAttribute="top" constant="32" id="Oo6-UX-cDA"/>
-                            <constraint firstItem="v4B-Zu-DXt" firstAttribute="trailing" secondItem="teN-bY-z75" secondAttribute="trailing" constant="15" id="WUX-z8-bkO"/>
-                            <constraint firstItem="teN-bY-z75" firstAttribute="leading" secondItem="v4B-Zu-DXt" secondAttribute="leading" constant="328" id="n5g-LY-p5H"/>
+                            <constraint firstItem="teN-bY-z75" firstAttribute="top" secondItem="v4B-Zu-DXt" secondAttribute="top" constant="40" id="Oo6-UX-cDA"/>
+                            <constraint firstItem="v4B-Zu-DXt" firstAttribute="trailing" secondItem="teN-bY-z75" secondAttribute="trailing" constant="20" id="WUX-z8-bkO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v4B-Zu-DXt"/>
                     </view>

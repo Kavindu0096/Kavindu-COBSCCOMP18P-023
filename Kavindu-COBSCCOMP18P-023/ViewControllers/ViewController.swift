@@ -19,11 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
 
     }
-    func load(){
-      //  let tabBarController = storyboard?.instantiateInitialViewController(withIdentifier: "MainTabController") as? MainTabController
-        
-      //  tabBarController.selectedViewController=tabBarController.viewControllers?[Tabs.Middle.rawValue]
-    }
+ 
 
 
 }
